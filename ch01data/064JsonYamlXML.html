@@ -42,7 +42,7 @@
     <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
 
   <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -404,10 +404,10 @@ looks a bit like a Javascript (or Python) data literal.</p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> myfile.json
-{
-    &quot;somekey&quot;: [&quot;a list&quot;, &quot;with values&quot;]
-}
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> myfile.json
+<span class="p">{</span>
+    <span class="s2">&quot;somekey&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a list&quot;</span><span class="p">,</span> <span class="s2">&quot;with values&quot;</span><span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
@@ -471,7 +471,7 @@ looks a bit like a Javascript (or Python) data literal.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;{\n    &#34;somekey&#34;: [&#34;a list&#34;, &#34;with values&#34;]\n}&#39;</pre>
+<pre>&#39;{\n    &#34;somekey&#34;: [&#34;a list&#34;, &#34;with values&#34;]\n}\n&#39;</pre>
 </div>
 
 </div>
@@ -583,10 +583,10 @@ looks a bit like a Javascript (or Python) data literal.</p>
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> myfile.yaml
-somekey:
-    - a list # Look, this is a list
-    - with values
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> myfile.yaml
+<span class="n">somekey</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">a</span> <span class="nb">list</span> <span class="c1"># Look, this is a list</span>
+    <span class="o">-</span> <span class="k">with</span> <span class="n">values</span>
 </pre></div>
 
     </div>
@@ -653,6 +653,18 @@ somekey:
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:1: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -697,7 +709,9 @@ you can control this choice:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>somekey: [a list, with values]
+<pre>somekey:
+- a list
+- with values
 
 </pre>
 </div>
@@ -832,7 +846,7 @@ It's very careful, but verbose. If your field uses XML data, you'll need to lear
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-01-05 12:40:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

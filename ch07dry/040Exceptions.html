@@ -42,7 +42,7 @@
     <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
 
   <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -260,7 +260,7 @@
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-9e1622b385b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-1-9e1622b385b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">0</span>
 
 <span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
@@ -352,7 +352,7 @@ information about where this class fits in the hierarchy, we can use <a href="ht
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-127e9e41ff29&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-3-127e9e41ff29&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> x <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> 
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> x<span class="ansi-blue-fg">:</span>
@@ -445,7 +445,7 @@ We raise an Exception with <code>raise</code>. Often, we can look for an appropr
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">MyCustomErrorType</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-d49058201ff8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-5-d49058201ff8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> 
 <span class="ansi-green-intense-fg ansi-bold">      4</span> 
 <span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span><span class="ansi-blue-fg">(</span>MyCustomErrorType<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Problem&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
@@ -499,7 +499,7 @@ We raise an Exception with <code>raise</code>. Often, we can look for an appropr
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">MyCustomErrorType</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-6-edbc5ba6fff8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-6-edbc5ba6fff8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      7</span> 
 <span class="ansi-green-intense-fg ansi-bold">      8</span> 
 <span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span><span class="ansi-blue-fg">(</span>MyCustomErrorType<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">404</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
@@ -718,6 +718,18 @@ Therefore, we should be specific and catch only the type of error we want.</p>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:4: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  after removing the cwd from sys.path.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -778,6 +790,18 @@ Therefore, we should be specific and catch only the type of error we want.</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected keys not found in file
 (&#39;anonymous&#39;, None)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:4: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  after removing the cwd from sys.path.
 </pre>
 </div>
 </div>
@@ -1204,6 +1228,18 @@ examine the type of the supplied content:</p>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:9: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  if __name__ == &#39;__main__&#39;:
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1249,6 +1285,18 @@ examine the type of the supplied content:</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>brilliant
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:6: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  
 </pre>
 </div>
 </div>
@@ -1306,6 +1354,18 @@ other data-source which responds like a dictionary or string.</strong></p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Amazing
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:13: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  del sys.path[0]
 </pre>
 </div>
 </div>
@@ -1404,7 +1464,7 @@ safe to do <code>except:</code> without catching a specific type of error.</p>
 The above exception was the direct cause of the following exception:
 
 <span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-31-88616a1de55f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-31-88616a1de55f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">     10</span> 
 <span class="ansi-green-intense-fg ansi-bold">     11</span> 
 <span class="ansi-green-fg">---&gt; 12</span><span class="ansi-red-fg"> </span>higher_function<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
@@ -1486,7 +1546,7 @@ principle.</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-01-05 12:40:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

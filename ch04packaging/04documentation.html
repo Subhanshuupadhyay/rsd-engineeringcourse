@@ -42,7 +42,7 @@
     <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
 
   <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -437,46 +437,46 @@ conf.py in the root of the project. This contains the project's Sphinx configura
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> greetings/conf.py
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> greetings/conf.py
 
-import sys
-import os
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
-extensions = [
-    &#39;sphinx.ext.autodoc&#39;,  # Support automatic documentation
-    &#39;sphinx.ext.coverage&#39;, # Automatically check if functions are documented
-    &#39;sphinx.ext.mathjax&#39;,  # Allow support for algebra
-    &#39;sphinx.ext.viewcode&#39;, # Include the source code in documentation
-    &#39;numpydoc&#39;             # Support NumPy style docstrings
-]
-templates_path = [&#39;_templates&#39;]
-source_suffix = &#39;.rst&#39;
-master_doc = &#39;index&#39;
-project = u&#39;Greetings&#39;
-copyright = u&#39;2014, James Hetherington&#39;
-version = &#39;0.1&#39;
-release = &#39;0.1&#39;
-exclude_patterns = [&#39;_build&#39;]
-pygments_style = &#39;sphinx&#39;
-htmlhelp_basename = &#39;Greetingsdoc&#39;
-latex_elements = {
-}
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>  <span class="c1"># Support automatic documentation</span>
+    <span class="s1">&#39;sphinx.ext.coverage&#39;</span><span class="p">,</span> <span class="c1"># Automatically check if functions are documented</span>
+    <span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">,</span>  <span class="c1"># Allow support for algebra</span>
+    <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span> <span class="c1"># Include the source code in documentation</span>
+    <span class="s1">&#39;numpydoc&#39;</span>             <span class="c1"># Support NumPy style docstrings</span>
+<span class="p">]</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="s1">&#39;.rst&#39;</span>
+<span class="n">master_doc</span> <span class="o">=</span> <span class="s1">&#39;index&#39;</span>
+<span class="n">project</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Greetings&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;2014, James Hetherington&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">]</span>
+<span class="n">pygments_style</span> <span class="o">=</span> <span class="s1">&#39;sphinx&#39;</span>
+<span class="n">htmlhelp_basename</span> <span class="o">=</span> <span class="s1">&#39;Greetingsdoc&#39;</span>
+<span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">}</span>
 
-latex_documents = [
-  (&#39;index&#39;, &#39;Greetings.tex&#39;, u&#39;Greetings Documentation&#39;,
-   u&#39;James Hetherington&#39;, &#39;manual&#39;),
-]
+<span class="n">latex_documents</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;Greetings.tex&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Greetings Documentation&#39;</span><span class="p">,</span>
+   <span class="sa">u</span><span class="s1">&#39;James Hetherington&#39;</span><span class="p">,</span> <span class="s1">&#39;manual&#39;</span><span class="p">),</span>
+<span class="p">]</span>
 
-man_pages = [
-    (&#39;index&#39;, &#39;greetings&#39;, u&#39;Greetings Documentation&#39;,
-     [u&#39;James Hetherington&#39;], 1)
-]
+<span class="n">man_pages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;greetings&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Greetings Documentation&#39;</span><span class="p">,</span>
+     <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;James Hetherington&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">]</span>
 
-texinfo_documents = [
-  (&#39;index&#39;, &#39;Greetings&#39;, u&#39;Greetings Documentation&#39;,
-   u&#39;James Hetherington&#39;, &#39;Greetings&#39;, &#39;One line description of project.&#39;,
-   &#39;Miscellaneous&#39;),
-]
+<span class="n">texinfo_documents</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;Greetings&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Greetings Documentation&#39;</span><span class="p">,</span>
+   <span class="sa">u</span><span class="s1">&#39;James Hetherington&#39;</span><span class="p">,</span> <span class="s1">&#39;Greetings&#39;</span><span class="p">,</span> <span class="s1">&#39;One line description of project.&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Miscellaneous&#39;</span><span class="p">),</span>
+<span class="p">]</span>
 </pre></div>
 
     </div>
@@ -523,13 +523,13 @@ texinfo_documents = [
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> greetings/index.rst
-Welcome to Greetings&#39;s documentation!
-=====================================
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> greetings/index.rst
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">Greetings</span><span class="s1">&#39;s documentation!</span>
+<span class="o">=====================================</span>
 
-Simple &quot;Hello, James&quot; module developed to teach research software engineering.
+<span class="n">Simple</span> <span class="s2">&quot;Hello, James&quot;</span> <span class="n">module</span> <span class="n">developed</span> <span class="n">to</span> <span class="n">teach</span> <span class="n">research</span> <span class="n">software</span> <span class="n">engineering</span><span class="o">.</span>
 
-.. autofunction:: greetings.greeter.greet
+<span class="o">..</span> <span class="n">autofunction</span><span class="p">::</span> <span class="n">greetings</span><span class="o">.</span><span class="n">greeter</span><span class="o">.</span><span class="n">greet</span>
 </pre></div>
 
     </div>
@@ -594,11 +594,11 @@ sphinx-build . doc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Running Sphinx v1.8.3
-making output directory...
+<pre>Running Sphinx v2.2.0
+making output directory... done
 building [mo]: targets for 0 po files that are out of date
 building [html]: targets for 1 source files that are out of date
-updating environment: 1 added, 0 changed, 0 removed
+updating environment: [new config] 1 added, 0 changed, 0 removed
 reading sources... [100%] index
 
 looking for now-outdated files... none found
@@ -607,13 +607,13 @@ checking consistency... done
 preparing documents... done
 writing output... [100%] index
 
-generating indices... genindex
+generating indices...  genindexdone
 highlighting module code... [100%] greetings.greeter
 
-writing additional pages... search
-copying static files... done
+writing additional pages...  searchdone
+copying static files... ... done
 copying extra files... done
-dumping search index in English (code: en) ... done
+dumping search index in English (code: en)... done
 dumping object inventory... done
 build succeeded.
 
@@ -663,39 +663,39 @@ multiple nested pages of documentation automatically for many functions.</p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> greetings/greetings/greeter.py
-def greet(personal, family, title=&quot;&quot;, polite=False):
-    &quot;&quot;&quot; Generate a greeting string for a person.
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> greetings/greetings/greeter.py
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">personal</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">polite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Generate a greeting string for a person.</span>
 
-    Parameters
-    ----------
-    personal: str
-        A given name, such as Will or Jean-Luc
-    family: str
-        A family name, such as Riker or Picard
-    title: str
-        An optional title, such as Captain or Reverend
-    polite: bool
-        True for a formal greeting, False for informal.
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    personal: str</span>
+<span class="sd">        A given name, such as Will or Jean-Luc</span>
+<span class="sd">    family: str</span>
+<span class="sd">        A family name, such as Riker or Picard</span>
+<span class="sd">    title: str</span>
+<span class="sd">        An optional title, such as Captain or Reverend</span>
+<span class="sd">    polite: bool</span>
+<span class="sd">        True for a formal greeting, False for informal.</span>
 
-    Returns
-    -------
-    string
-        An appropriate greeting
-        
-    Examples
-    --------
-    &gt;&gt;&gt; from greetings.greeter import greet
-    &gt;&gt;&gt; greet(&quot;Terry&quot;, &quot;Jones&quot;)
-    &#39;Hey, Terry Jones.
-    &quot;&quot;&quot;
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    string</span>
+<span class="sd">        An appropriate greeting</span>
+<span class="sd">        </span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from greetings.greeter import greet</span>
+<span class="sd">    &gt;&gt;&gt; greet(&quot;Terry&quot;, &quot;Jones&quot;)</span>
+<span class="sd">    &#39;Hey, Terry Jones.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    greeting= &quot;How do you do, &quot; if polite else &quot;Hey, &quot;
-    if title:
-        greeting += f&quot;{title} &quot;
+    <span class="n">greeting</span><span class="o">=</span> <span class="s2">&quot;How do you do, &quot;</span> <span class="k">if</span> <span class="n">polite</span> <span class="k">else</span> <span class="s2">&quot;Hey, &quot;</span>
+    <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+        <span class="n">greeting</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{title}</span><span class="s2"> &quot;</span>
 
-    greeting += f&quot;{personal} {family}.&quot;
-    return greeting
+    <span class="n">greeting</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{personal}</span><span class="s2"> </span><span class="si">{family}</span><span class="s2">.&quot;</span>
+    <span class="k">return</span> <span class="n">greeting</span>
 </pre></div>
 
     </div>
@@ -757,6 +757,52 @@ Got:
    1 of   2 in greeter.greet
 ***Test Failed*** 1 failures.
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-5fa547949a14&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;python -m doctest greetings/greetings/greeter.py\n&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
+<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    143</span> 
+<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
+
+<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    246</span> 
+<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;python -m doctest greetings/greetings/greeter.py\n&#39;&#39; returned non-zero exit status 1.</pre>
 </div>
 </div>
 
@@ -839,7 +885,7 @@ Got:
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-01-05 12:40:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

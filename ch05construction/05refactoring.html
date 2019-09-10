@@ -42,7 +42,7 @@
     <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
 
   <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -777,13 +777,13 @@ depending on memory layout. Be careful.</p>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> config.yaml
-bounds: [0, 0, 100, 100]
-counts:
-    hawk: 5
-    starling: 500
-speed: 2.0
-turning_circle: 3.0
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> config.yaml
+<span class="n">bounds</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">counts</span><span class="p">:</span>
+    <span class="n">hawk</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="n">starling</span><span class="p">:</span> <span class="mi">500</span>
+<span class="n">speed</span><span class="p">:</span> <span class="mf">2.0</span>
+<span class="n">turning_circle</span><span class="p">:</span> <span class="mf">3.0</span>
 </pre></div>
 
     </div>
@@ -825,6 +825,25 @@ turning_circle: 3.0
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/ipykernel_launcher.py:1: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1080,9 +1099,9 @@ and <a href="https://docs.python.org/3/library/os.html">Python's os module</a>.<
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> anotherfile.py
-class One(object):
-    pass
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> anotherfile.py
+<span class="k">class</span> <span class="nc">One</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
 </pre></div>
 
     </div>
@@ -1241,7 +1260,7 @@ add new tests for them.</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-01-05 12:40:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

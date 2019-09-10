@@ -42,7 +42,7 @@
     <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
 
   <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -288,7 +288,7 @@ download data, and place it in Python objects.</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;http://maps.googleapis.com:80/maps/api/staticmap?size=400x400&amp;center=51.51,-0.1275&amp;zoom=12&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;https://static-maps.yandex.ru/1.x/?size=400,400&amp;ll=-0.1275,51.51&amp;z=10&amp;l=sat&amp;lang=en_US&quot;</span>
 </pre></div>
 
     </div>
@@ -307,7 +307,7 @@ download data, and place it in Python objects.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;http://maps.googleapis.com:80/maps/api/staticmap?size=400x400&amp;center=51.51,-0.1275&amp;zoom=12&#39;</pre>
+<pre>&#39;https://static-maps.yandex.ru/1.x/?size=400,400&amp;ll=-0.1275,51.51&amp;z=10&amp;l=sat&amp;lang=en_US&#39;</pre>
 </div>
 
 </div>
@@ -321,11 +321,11 @@ download data, and place it in Python objects.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A url consists of:</p>
 <ul>
-<li>A <em>scheme</em> (http, https, ssh, ...)</li>
-<li>A <em>host</em> (maps.googleapis.com, the name of the remote computer you want to talk to)</li>
-<li>A <em>port</em> (optional, most protocols have a typical port associated with them, e.g. 80 for http)</li>
-<li>A <em>path</em> (Like a file path on the machine, here it is maps/api/staticmap)</li>
-<li>A <em>query</em> part after a ?, (optional, usually ampersand-separated <em>parameters</em> e.g. size=400x400, or zoom=12)</li>
+<li>A <em>scheme</em> (<code>http</code>, <code>https</code>, <code>ssh</code>, ...)</li>
+<li>A <em>host</em> (<code>static-maps.yandex.ru</code>, the name of the remote computer you want to talk to)</li>
+<li>A <em>port</em> (optional, most protocols have a typical port associated with them, e.g. 80 for http, 443 for https)</li>
+<li>A <em>path</em> (Like a file path on the machine, here it is <code>1.x/</code>)</li>
+<li>A <em>query</em> part after a <code>?</code>, (optional, usually ampersand-separated <em>parameters</em> e.g. <code>size=400x400</code>, or <code>z=10</code>)</li>
 </ul>
 
 </div>
@@ -335,7 +335,7 @@ download data, and place it in Python objects.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Supplementary materials</strong>: These can actually be different for different protocols, the above is a simplification, you can see more, for example, at
-    <a href="https://en.wikipedia.org/wiki/URI_scheme">https://en.wikipedia.org/wiki/URI_scheme</a></p>
+    <a href="https://en.wikipedia.org/wiki/URI_scheme">the wikipedia article about the URI scheme</a>.</p>
 
 </div>
 </div>
@@ -344,7 +344,7 @@ download data, and place it in Python objects.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>URLs are not allowed to include all characters; we need to, for example, "escape" a space that appears inside the URL,
-replacing it with %20, so e.g. a request of <a href="http://some">http://some</a> example.com/ would need to be <a href="http://some%20example.com/">http://some%20example.com/</a></p>
+replacing it with <code>%20</code>, so e.g. a request of <code>http://some example.com/</code> would need to be <code>http://some%20example.com/</code></p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ replacing it with %20, so e.g. a request of <a href="http://some">http://some</a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Supplementary materials</strong>: The escaping rules are quite subtle. See <a href="https://en.wikipedia.org/wiki/Percent-encoding">https://en.wikipedia.org/wiki/Percent-encoding</a>. The standard library provides the <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode">urlencode</a> function that can take care of this for you.</p>
+<p><strong>Supplementary materials</strong>: The escaping rules are quite subtle. See <a href="https://en.wikipedia.org/wiki/Percent-encoding">the wikipedia article for more detail</a>. The standard library provides the <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode">urlencode</a> function that can take care of this for you.</p>
 
 </div>
 </div>
@@ -406,12 +406,14 @@ replacing it with %20, so e.g. a request of <a href="http://some">http://some</a
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://maps.googleapis.com/maps/api/staticmap&quot;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://static-maps.yandex.ru/1.x/?size=400,400&amp;ll=-0.1275,51.51&amp;z=10&amp;l=sat&amp;lang=en_US&quot;</span><span class="p">,</span>
                         <span class="n">params</span><span class="o">=</span><span class="p">{</span>
-        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="s1">&#39;400x400&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;center&#39;</span><span class="p">:</span> <span class="s1">&#39;51.51,-0.1275&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="mi">12</span>
-    <span class="p">})</span>
+                            <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="s1">&#39;400,400&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;ll&#39;</span><span class="p">:</span> <span class="s1">&#39;-0.1275,51.51&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                            <span class="s1">&#39;l&#39;</span><span class="p">:</span> <span class="s1">&#39;sat&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;en_US&#39;</span>
+                        <span class="p">})</span>
 </pre></div>
 
     </div>
@@ -443,7 +445,7 @@ replacing it with %20, so e.g. a request of <a href="http://some">http://some</a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>b&#39;The Google Maps Platform server rejected your requ&#39;</pre>
+<pre>b&#39;\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00H\x00H\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f&#39;</pre>
 </div>
 
 </div>
@@ -796,7 +798,7 @@ our scope for this course, but it's important to know it's possible, and start t
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-01-05 12:40:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
