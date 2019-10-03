@@ -301,17 +301,6 @@ git checkout -b experiment <span class="c1"># Make a new branch</span>
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>M	Wales.md
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Switched to a new branch &#39;experiment&#39;
 </pre>
@@ -418,8 +407,8 @@ git commit -am <span class="s2">&quot;Add Cadair Idris&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[experiment 3e6b8ad] Add Cadair Idris
- 1 file changed, 2 insertions(+)
+<pre>[experiment 07dab6e] Add Cadair Idris
+ 1 file changed, 1 insertion(+)
 </pre>
 </div>
 </div>
@@ -444,6 +433,17 @@ git checkout master <span class="c1"># Switch to an existing branch</span>
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Your branch is up to date with &#39;origin/master&#39;.
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -490,6 +490,7 @@ cat Wales.md
 * Tryfan
 * Snowdon
 * Glyder Fawr
+* Fan y Big
 </pre>
 </div>
 </div>
@@ -599,17 +600,8 @@ git push -u origin experiment
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>ERROR: We&#39;re doing an SSH key audit.
-Reason: unverified automatically (private key found in a public repository)
-Please visit https://github.com/settings/keys/17645879
-to approve this key so we know it&#39;s safe.
-Fingerprint: 40:2c:72:43:84:69:73:6d:a9:e0:f3:b4:aa:d6:b3:0d
-
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Branch &#39;experiment&#39; set up to track remote branch &#39;experiment&#39; from &#39;origin&#39;.
 </pre>
 </div>
 </div>
@@ -619,44 +611,15 @@ and the repository exists.
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-3df2618a7a35&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git push -u origin experiment\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git push -u origin experiment\n&#39;&#39; returned non-zero exit status 128.</pre>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning: Permanently added the RSA host key for IP address &#39;140.82.114.3&#39; to the list of known hosts.
+remote: 
+remote: Create a pull request for &#39;experiment&#39; on GitHub by visiting:        
+remote:      https://github.com/UCL/github-example/pull/new/experiment        
+remote: 
+To github.com:UCL/github-example.git
+ * [new branch]      experiment -&gt; experiment
+</pre>
 </div>
 </div>
 
@@ -703,6 +666,26 @@ git branch -r
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  origin/experiment
+  origin/gh-pages
+  origin/master
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -737,8 +720,8 @@ git branch -vv
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>* experiment 3e6b8ad Add Cadair Idris
-  master     5222fdb Add Glyder
+<pre>* experiment 07dab6e [origin/experiment] Add Cadair Idris
+  master     e1691d2 [origin/master] Merge branch &#39;master&#39; of github.com:UCL/github-example
 </pre>
 </div>
 </div>
@@ -780,9 +763,9 @@ git log master..experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>commit 3e6b8ad4702d5a2bb2443c7ce3b203f675390736
-Author: James Hetherington &lt;jamespjh@gmail.com&gt;
-Date:   Tue Sep 10 17:29:22 2019 +0000
+<pre>commit 07dab6e12c5762ea3d7ba81c87919d290df129dd
+Author: Lancelot the Brave &lt;l.brave@spamalot.uk&gt;
+Date:   Thu Oct 3 02:31:56 2019 +0000
 
     Add Cadair Idris
 </pre>
@@ -826,10 +809,13 @@ git log --graph --oneline HEAD~9..HEAD~5
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>* 2e38d83 Add Scotland
-* d47ee99 Add wales
-* fa904bd Add Helvellyn
-* d78aaad Include lakes in the scope
+<pre>*   7583a49 Merge branch &#39;master&#39; of github.com:UCL/github-example
+|\  
+| * 4a9a642 Add Scotland
+* | 3f8fc8d Add wales
+|/  
+* 3f59895 Add Helvellyn
+* 75043eb Include lakes in the scope
 </pre>
 </div>
 </div>
@@ -870,11 +856,16 @@ git log --graph --oneline HEAD~5..HEAD
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>* 3e6b8ad Add Cadair Idris
-* 5222fdb Add Glyder
-* e2953b2 Add another Beacon
-* 7040150 Add a beacon
-* 916271a Translating from the Welsh
+<pre>* 07dab6e Add Cadair Idris
+*   e1691d2 Merge branch &#39;master&#39; of github.com:UCL/github-example
+|\  
+| * e680222 Add another Beacon
+* | 066d63b Add Glyder
+|/  
+*   592f047 Merge branch &#39;master&#39; of github.com:UCL/github-example
+|\  
+| * 2fc915a Add a beacon
+* 155d166 Translating from the Welsh
 </pre>
 </div>
 </div>
@@ -907,6 +898,17 @@ git checkout master
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Your branch is up to date with &#39;origin/master&#39;.
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -1023,7 +1025,7 @@ git commit -am <span class="s2">&quot;Commit Aonach onto master branch&quot;</sp
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 0f29842] Commit Aonach onto master branch
+<pre>[master 638d772] Commit Aonach onto master branch
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -1064,8 +1066,8 @@ git log --left-right --oneline master...experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt; 0f29842 Commit Aonach onto master branch
-&gt; 3e6b8ad Add Cadair Idris
+<pre>&lt; 638d772 Commit Aonach onto master branch
+&gt; 07dab6e Add Cadair Idris
 </pre>
 </div>
 </div>
@@ -1124,8 +1126,8 @@ git merge experiment
 <pre>  experiment
 * master
 Merge made by the &#39;recursive&#39; strategy.
- Wales.md | 2 ++
- 1 file changed, 2 insertions(+)
+ Wales.md | 1 +
+ 1 file changed, 1 insertion(+)
 </pre>
 </div>
 </div>
@@ -1157,12 +1159,13 @@ git log --graph --oneline HEAD~3..HEAD
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   34fbb39 Merge branch &#39;experiment&#39;
+<pre>*   0826f61 Merge branch &#39;experiment&#39;
 |\  
-| * 3e6b8ad Add Cadair Idris
-* | 0f29842 Commit Aonach onto master branch
+| * 07dab6e Add Cadair Idris
+* | 638d772 Commit Aonach onto master branch
 |/  
-* 5222fdb Add Glyder
+* e1691d2 Merge branch &#39;master&#39; of github.com:UCL/github-example
+* e680222 Add another Beacon
 </pre>
 </div>
 </div>
@@ -1234,7 +1237,7 @@ git branch -d experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Deleted branch experiment (was 3e6b8ad).
+<pre>Deleted branch experiment (was 07dab6e).
 </pre>
 </div>
 </div>
@@ -1288,6 +1291,26 @@ git branch --remote
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  origin/experiment
+  origin/gh-pages
+  origin/master
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1314,63 +1337,9 @@ git push --delete origin experiment
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>ERROR: We&#39;re doing an SSH key audit.
-Reason: unverified automatically (private key found in a public repository)
-Please visit https://github.com/settings/keys/17645879
-to approve this key so we know it&#39;s safe.
-Fingerprint: 40:2c:72:43:84:69:73:6d:a9:e0:f3:b4:aa:d6:b3:0d
-
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
+<pre>To github.com:UCL/github-example.git
+ - [deleted]         experiment
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-28-0d7439fb72e4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git push --delete origin experiment \n# Remove remote branch \n# - also can use github interface\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git push --delete origin experiment \n# Remove remote branch \n# - also can use github interface\n&#39;&#39; returned non-zero exit status 128.</pre>
 </div>
 </div>
 
@@ -1388,6 +1357,25 @@ git branch --remote
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  origin/gh-pages
+  origin/master
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1499,7 +1487,7 @@ and apply it as a patch to your branch, use:</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-03 02:40:39 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

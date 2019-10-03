@@ -279,7 +279,7 @@ program in order to have a program that can, in principle, do anything!</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot; is negative&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{x}</span><span class="s2"> is negative&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -303,7 +303,7 @@ program in order to have a program that can, in principle, do anything!</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot; is negative&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{x}</span><span class="s2"> is negative&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -320,7 +320,7 @@ program in order to have a program that can, in principle, do anything!</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-10  is negative
+<pre>-10 is negative
 </pre>
 </div>
 </div>
@@ -876,7 +876,7 @@ In python three, you cannot compare these.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">3.2</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span><span class="p">):</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;is not a positive integer&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -982,7 +982,7 @@ In python three, you cannot compare these.</p>
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;James&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;Graham&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1114,7 +1114,7 @@ In python three, you cannot compare these.</p>
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;James&#39;</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Graham&#39;</span><span class="p">})</span>
 </pre></div>
 
     </div>
@@ -1546,7 +1546,7 @@ This can be annoying when commenting things out. (With <code>#</code>)</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-09-10 17:38:19 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-03 02:40:39 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
