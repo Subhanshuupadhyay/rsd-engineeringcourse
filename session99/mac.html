@@ -223,12 +223,14 @@
 <p>We do not recommend following this training on older versions of OSX without an app store: upgrade
 to at least OSX Mavericks.</p>
 
-<h2>Anaconda</h2>
+<h2>Git</h2>
 
-<p>Download <a href="https://www.anaconda.com/download/#macos">Anaconda</a> with Python 3.6 version.
-Follow the defaults for the installation.</p>
+<p>On a terminal you can install <code>git</code> by trying to run it:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git --version
+</code></pre></div>
+<p>If that throws you an error message, then most likely you will need to install XCode.</p>
 
-<h2>XCode and Command line tools</h2>
+<h3>XCode and Command line tools</h3>
 
 <p>Install the XCode command-line-tools by opening a terminal and run the following.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">xcode-select --install
@@ -237,15 +239,11 @@ Follow the defaults for the installation.</p>
 
 <p>You may also install Xcode from the Mac app store if you wish, but it is not needed.</p>
 
-<p>Pre Mavericks:</p>
+<p><em>Pre Mavericks</em>:</p>
 
 <p>Install <a href="https://itunes.apple.com/us/app/xcode/id497799835">XCode</a> using the Mac app store.</p>
 
 <p>Then, go to Xcode...Preferences...Downloads... and install the command line tools option.</p>
-
-<h2>Git</h2>
-
-<p>The XCode tools comes with Git so no need to do anything more.</p>
 
 <h2>Homebrew</h2>
 
@@ -270,9 +268,9 @@ installing homebrew.</p>
 <a href="https://www.anaconda.com/distribution/">Anaconda</a>.</p>
 
 <p>Please download and install <a href="https://www.anaconda.com/download/">Anaconda</a>
-(Python 3.6 version).</p>
+(Python 3.7 version).</p>
 
-<h2>Python from Homebrew</h2>
+<h3>Python from Homebrew</h3>
 
 <p>Alternatively if you wish to install python manually you can use Homebrew.
 OSX ships with python and some packages. However this has known limitations and we do not recommend it.
@@ -289,7 +287,7 @@ execute the following command:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">python --version
 </code></pre></div>
 <p>Which should print:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Python 3.6.1
+<div class="highlight"><pre><code class="language-" data-lang="">Python 3.7.x
 </code></pre></div>
 <p>This will result in an installation of <code>python3</code> and <code>pip3</code> which you can use to have access to the latest python features which will be taught in this course.</p>
 
@@ -320,7 +318,13 @@ installing them manually just in case.</p>
 <h2>Editor and shell</h2>
 
 <p>The default text editor on OS X <em>textedit</em> should be sufficient for our use. Alternatively
-we recommend to use <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+we recommend to use <a href="https://code.visualstudio.com/">Visual Studio Code</a>.
+Check <a href="https://code.visualstudio.com/docs/setup/mac">their setup page</a> for detailed
+instructions.</p>
+
+<p>For a better git integration we suggest the <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">git
+graph</a>
+plugin.</p>
 
 <p>To setup git to use <em>textedit</em> executing the following in a terminal should do.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global core.editor /Applications/TextEdit.app/Contents/MacOS/TextEdit
@@ -381,7 +385,7 @@ git config --global core.editor &quot;code --wait&quot;
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-10-03 02:40:39 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-06 13:33:29 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
