@@ -490,11 +490,11 @@ mkdir -p greengraph  <span class="c1"># Create the folder for the module (on mac
 <span class="ansi-green-fg">--&gt; 649</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">.</span>full_url<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    650</span> 
 
-<span class="ansi-red-fg">HTTPError</span>: HTTP Error 429: Too Many Requests
+<span class="ansi-red-fg">HTTPError</span>: HTTP Error 403: Forbidden
 
 During handling of the above exception, another exception occurred:
 
-<span class="ansi-red-fg">GeocoderQuotaExceeded</span>                     Traceback (most recent call last)
+<span class="ansi-red-fg">GeocoderInsufficientPrivileges</span>            Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-5-a69e6d6508d4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> 
 <span class="ansi-green-intense-fg ansi-bold">      5</span> mygraph <span class="ansi-blue-fg">=</span> Greengraph<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;New York&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Chicago&#39;</span><span class="ansi-blue-fg">)</span>
@@ -528,7 +528,7 @@ During handling of the above exception, another exception occurred:
 <span class="ansi-green-intense-fg ansi-bold">    374</span>                 <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    375</span>                     <span class="ansi-green-fg">raise</span> GeocoderServiceError<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">GeocoderQuotaExceeded</span>: HTTP Error 429: Too Many Requests</pre>
+<span class="ansi-red-fg">GeocoderInsufficientPrivileges</span>: HTTP Error 403: Forbidden</pre>
 </div>
 </div>
 
@@ -623,7 +623,7 @@ During handling of the above exception, another exception occurred:
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-10-06 13:33:29 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-19 15:54:35 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
