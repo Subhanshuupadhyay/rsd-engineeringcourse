@@ -407,7 +407,7 @@ git commit -am <span class="s2">&quot;Add Cadair Idris&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[experiment 7a64046] Add Cadair Idris
+<pre>[experiment 68465de] Add Cadair Idris
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -719,8 +719,8 @@ git branch -vv
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>* experiment 7a64046 [origin/experiment] Add Cadair Idris
-  master     a8f51b3 [origin/master] Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>* experiment 68465de [origin/experiment] Add Cadair Idris
+  master     7906e39 [origin/master] Merge branch &#39;master&#39; of github.com:UCL/github-example
 </pre>
 </div>
 </div>
@@ -762,9 +762,9 @@ git log master..experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>commit 7a64046c85666f45123e62b180f5dd23d086e462
+<pre>commit 68465de2ac00f978a7dbadfde1afa5bc4ac4395d
 Author: Lancelot the Brave &lt;l.brave@spamalot.uk&gt;
-Date:   Mon Oct 21 12:45:40 2019 +0000
+Date:   Wed Oct 30 09:17:41 2019 +0000
 
     Add Cadair Idris
 </pre>
@@ -808,13 +808,13 @@ git log --graph --oneline HEAD~9..HEAD~5
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   ed6c64f Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>*   011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * bc83930 Add Scotland
-* | c27d6f1 Add wales
+| * 22d5658 Add Scotland
+* | 9d14e69 Add wales
 |/  
-* 7b96514 Add Helvellyn
-* 1aa5fb9 Include lakes in the scope
+* ce7f286 Add Helvellyn
+* 81a4d19 Include lakes in the scope
 </pre>
 </div>
 </div>
@@ -855,16 +855,16 @@ git log --graph --oneline HEAD~5..HEAD
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>* 7a64046 Add Cadair Idris
-*   a8f51b3 Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>* 68465de Add Cadair Idris
+*   7906e39 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * 437402f Add another Beacon
-* | a559537 Add Glyder
+| * dff9e20 Add another Beacon
+* | 93192a6 Add Glyder
 |/  
-*   32d2c74 Merge branch &#39;master&#39; of github.com:UCL/github-example
+*   bca1582 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * df6dc4b Add a beacon
-* 5f9300a Translating from the Welsh
+| * fd23f53 Add a beacon
+* cf9a956 Translating from the Welsh
 </pre>
 </div>
 </div>
@@ -1024,7 +1024,7 @@ git commit -am <span class="s2">&quot;Commit Aonach onto master branch&quot;</sp
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 3f8a9c6] Commit Aonach onto master branch
+<pre>[master 7dfd3b9] Commit Aonach onto master branch
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -1065,8 +1065,8 @@ git log --left-right --oneline master...experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt; 3f8a9c6 Commit Aonach onto master branch
-&gt; 7a64046 Add Cadair Idris
+<pre>&lt; 7dfd3b9 Commit Aonach onto master branch
+&gt; 68465de Add Cadair Idris
 </pre>
 </div>
 </div>
@@ -1158,13 +1158,13 @@ git log --graph --oneline HEAD~3..HEAD
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   0b50cfe Merge branch &#39;experiment&#39;
+<pre>*   3e782d1 Merge branch &#39;experiment&#39;
 |\  
-| * 7a64046 Add Cadair Idris
-* | 3f8a9c6 Commit Aonach onto master branch
+| * 68465de Add Cadair Idris
+* | 7dfd3b9 Commit Aonach onto master branch
 |/  
-* a8f51b3 Merge branch &#39;master&#39; of github.com:UCL/github-example
-* 437402f Add another Beacon
+* 7906e39 Merge branch &#39;master&#39; of github.com:UCL/github-example
+* dff9e20 Add another Beacon
 </pre>
 </div>
 </div>
@@ -1236,7 +1236,7 @@ git branch -d experiment
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Deleted branch experiment (was 7a64046).
+<pre>Deleted branch experiment (was 68465de).
 </pre>
 </div>
 </div>
@@ -1336,7 +1336,8 @@ git push --delete origin experiment
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>To github.com:UCL/github-example.git
+<pre>Warning: Permanently added the RSA host key for IP address &#39;140.82.113.4&#39; to the list of known hosts.
+To github.com:UCL/github-example.git
  - [deleted]         experiment
 </pre>
 </div>
@@ -1486,7 +1487,7 @@ and apply it as a patch to your branch, use:</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-10-21 12:54:33 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-30 09:25:46 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

@@ -237,6 +237,16 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>When programming, it is very important to know that the code we have written does what it was intended. Unfortunately, this step is often skipped in scientific programming, especially when developing code for our own personal work.</p>
+<p>Researchers sometimes check that their code behaves correctly by manually running it on some sample data and inspecting the results. However, it is much better and safer to automate this process, so the tests can be run often -- perhaps even after each new commit! This not only reassures us that the code behaves as it should at any given moment, it also gives us more flexibility to change it, because we have a way of knowing when we have broken something by accident.</p>
+<p>In this chapter, we will mostly look at how to write <strong>unit tests</strong>, which check the behaviour of small parts of our code. We will work with a particular framework for Python code, but the principles we discuss are general. We will also look at how to use a debugger to locate problems in our code, and services that simplify the automated running of tests.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="A-few-reasons-not-to-do-testing">A few reasons not to do testing<a class="anchor-link" href="#A-few-reasons-not-to-do-testing">&#182;</a></h3>
 </div>
 </div>
@@ -285,13 +295,13 @@
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="A-few-reasons-to-do-testing">A few reasons to do testing<a class="anchor-link" href="#A-few-reasons-to-do-testing">&#182;</a></h3><ul>
-<li><strong>lazyness</strong> <em>testing saves time</em></li>
-<li><strong>peace of mind</strong> <em>tests (should) ensure code is correct</em></li>
-<li><strong>runnable specification</strong> <em>best way to let others know what a function should do and
-  not do</em></li>
-<li><strong>reproducible debugging</strong> <em>debugging that happened and is saved for later reuse</em></li>
-<li>code structure / <strong>modularity</strong> <em>since the code is designed for at least two situations</em></li>
-<li>easier to modify <em>since results can be tested</em></li>
+<li><strong>laziness</strong>: testing saves time</li>
+<li><strong>peace of mind</strong>: tests (should) ensure code is correct</li>
+<li><strong>runnable specification</strong>: best way to let others know what a function should do and
+  not do</li>
+<li><strong>reproducible debugging</strong>: debugging that happened and is saved for later reuse</li>
+<li><strong>code structure / modularity</strong>: since we may have to call parts of the code independently during the tests</li>
+<li><strong>ease of modification</strong>: since results can be tested</li>
 </ul>
 
 </div>
@@ -469,7 +479,7 @@ check output against expected result</code></pre>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-10-21 12:54:33 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-10-30 09:25:46 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
