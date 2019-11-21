@@ -588,7 +588,7 @@ git commit -m <span class="s2">&quot;Add wales&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 9d14e69] Add wales
+<pre>[master 46ef3ea] Add wales
  1 file changed, 5 insertions(+)
  create mode 100644 Wales.md
 </pre>
@@ -714,7 +714,7 @@ git commit -m <span class="s2">&quot;Add Scotland&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 22d5658] Add Scotland
+<pre>[master 1962056] Add Scotland
  1 file changed, 5 insertions(+)
  create mode 100644 Scotland.md
 </pre>
@@ -757,7 +757,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   ce7f286..22d5658  master -&gt; master
+   8556f71..1962056  master -&gt; master
 </pre>
 </div>
 </div>
@@ -799,7 +799,7 @@ git push
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash --no-raise-error
 git push
 </pre></div>
 
@@ -826,52 +826,6 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., &#39;git pull ...&#39;) before pushing again.
 hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-17-38bca6a3a98d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git push\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git push\n&#39;&#39; returned non-zero exit status 1.</pre>
 </div>
 </div>
 
@@ -925,7 +879,7 @@ git pull
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   ce7f286..22d5658  master     -&gt; origin/master
+   8556f71..1962056  master     -&gt; origin/master
  * [new branch]      gh-pages   -&gt; origin/gh-pages
 </pre>
 </div>
@@ -975,7 +929,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   22d5658..011e8a6  master -&gt; master
+   1962056..62d52f4  master -&gt; master
 </pre>
 </div>
 </div>
@@ -1028,7 +982,7 @@ git pull
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Updating 22d5658..011e8a6
+<pre>Updating 1962056..62d52f4
 Fast-forward
  Wales.md | 5 +++++
  1 file changed, 5 insertions(+)
@@ -1044,7 +998,7 @@ Fast-forward
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   22d5658..011e8a6  master     -&gt; origin/master
+   1962056..62d52f4  master     -&gt; origin/master
 </pre>
 </div>
 </div>
@@ -1196,7 +1150,7 @@ git commit -am <span class="s2">&quot;Translating from the Welsh&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master cf9a956] Translating from the Welsh
+<pre>[master 2f847ed] Translating from the Welsh
  1 file changed, 1 insertion(+), 1 deletion(-)
 </pre>
 </div>
@@ -1229,17 +1183,17 @@ git log --oneline
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>cf9a956 Translating from the Welsh
-011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
-9d14e69 Add wales
-22d5658 Add Scotland
-ce7f286 Add Helvellyn
-81a4d19 Include lakes in the scope
-f1a7b1c Add lakeland
-584ec76 Revert &#34;Add a lie about a mountain&#34;
-8f92adc Change title
-cce7ad1 Add a lie about a mountain
-9f9e774 First commit of discourse on UK topography
+<pre>2f847ed Translating from the Welsh
+62d52f4 Merge branch &#39;master&#39; of github.com:UCL/github-example
+46ef3ea Add wales
+1962056 Add Scotland
+8556f71 Add Helvellyn
+f3f1163 Include lakes in the scope
+bb8ce57 Add lakeland
+6d9e88c Revert &#34;Add a lie about a mountain&#34;
+b440ccb Change title
+5cf2cf2 Add a lie about a mountain
+0219cd0 First commit of discourse on UK topography
 </pre>
 </div>
 </div>
@@ -1321,7 +1275,7 @@ git commit -am <span class="s2">&quot;Add a beacon&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master fd23f53] Add a beacon
+<pre>[master 0d67a8f] Add a beacon
  1 file changed, 2 insertions(+), 1 deletion(-)
 </pre>
 </div>
@@ -1354,17 +1308,17 @@ git log --oneline
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>fd23f53 Add a beacon
-011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
-9d14e69 Add wales
-22d5658 Add Scotland
-ce7f286 Add Helvellyn
-81a4d19 Include lakes in the scope
-f1a7b1c Add lakeland
-584ec76 Revert &#34;Add a lie about a mountain&#34;
-8f92adc Change title
-cce7ad1 Add a lie about a mountain
-9f9e774 First commit of discourse on UK topography
+<pre>0d67a8f Add a beacon
+62d52f4 Merge branch &#39;master&#39; of github.com:UCL/github-example
+46ef3ea Add wales
+1962056 Add Scotland
+8556f71 Add Helvellyn
+f3f1163 Include lakes in the scope
+bb8ce57 Add lakeland
+6d9e88c Revert &#34;Add a lie about a mountain&#34;
+b440ccb Change title
+5cf2cf2 Add a lie about a mountain
+0219cd0 First commit of discourse on UK topography
 </pre>
 </div>
 </div>
@@ -1397,7 +1351,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   011e8a6..fd23f53  master -&gt; master
+   62d52f4..0d67a8f  master -&gt; master
 </pre>
 </div>
 </div>
@@ -1432,7 +1386,7 @@ git push
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash --no-raise-error
 git push
 </pre></div>
 
@@ -1459,52 +1413,6 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., &#39;git pull ...&#39;) before pushing again.
 hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-33-38bca6a3a98d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git push\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git push\n&#39;&#39; returned non-zero exit status 1.</pre>
 </div>
 </div>
 
@@ -1550,7 +1458,7 @@ Merge made by the &#39;recursive&#39; strategy.
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   011e8a6..fd23f53  master     -&gt; origin/master
+   62d52f4..0d67a8f  master     -&gt; origin/master
 </pre>
 </div>
 </div>
@@ -1583,7 +1491,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   fd23f53..bca1582  master -&gt; master
+   0d67a8f..655bc1f  master -&gt; master
 </pre>
 </div>
 </div>
@@ -1615,23 +1523,23 @@ git log --oneline --graph
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   bca1582 Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>*   655bc1f Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * fd23f53 Add a beacon
-* | cf9a956 Translating from the Welsh
+| * 0d67a8f Add a beacon
+* | 2f847ed Translating from the Welsh
 |/  
-*   011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
+*   62d52f4 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * 22d5658 Add Scotland
-* | 9d14e69 Add wales
+| * 1962056 Add Scotland
+* | 46ef3ea Add wales
 |/  
-* ce7f286 Add Helvellyn
-* 81a4d19 Include lakes in the scope
-* f1a7b1c Add lakeland
-* 584ec76 Revert &#34;Add a lie about a mountain&#34;
-* 8f92adc Change title
-* cce7ad1 Add a lie about a mountain
-* 9f9e774 First commit of discourse on UK topography
+* 8556f71 Add Helvellyn
+* f3f1163 Include lakes in the scope
+* bb8ce57 Add lakeland
+* 6d9e88c Revert &#34;Add a lie about a mountain&#34;
+* b440ccb Change title
+* 5cf2cf2 Add a lie about a mountain
+* 0219cd0 First commit of discourse on UK topography
 </pre>
 </div>
 </div>
@@ -1676,7 +1584,7 @@ git pull
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Updating fd23f53..bca1582
+<pre>Updating 0d67a8f..655bc1f
 Fast-forward
 </pre>
 </div>
@@ -1689,7 +1597,7 @@ Fast-forward
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   fd23f53..bca1582  master     -&gt; origin/master
+   0d67a8f..655bc1f  master     -&gt; origin/master
 </pre>
 </div>
 </div>
@@ -1721,23 +1629,23 @@ git log --graph --oneline
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   bca1582 Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>*   655bc1f Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * fd23f53 Add a beacon
-* | cf9a956 Translating from the Welsh
+| * 0d67a8f Add a beacon
+* | 2f847ed Translating from the Welsh
 |/  
-*   011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
+*   62d52f4 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * 22d5658 Add Scotland
-* | 9d14e69 Add wales
+| * 1962056 Add Scotland
+* | 46ef3ea Add wales
 |/  
-* ce7f286 Add Helvellyn
-* 81a4d19 Include lakes in the scope
-* f1a7b1c Add lakeland
-* 584ec76 Revert &#34;Add a lie about a mountain&#34;
-* 8f92adc Change title
-* cce7ad1 Add a lie about a mountain
-* 9f9e774 First commit of discourse on UK topography
+* 8556f71 Add Helvellyn
+* f3f1163 Include lakes in the scope
+* bb8ce57 Add lakeland
+* 6d9e88c Revert &#34;Add a lie about a mountain&#34;
+* b440ccb Change title
+* 5cf2cf2 Add a lie about a mountain
+* 0219cd0 First commit of discourse on UK topography
 </pre>
 </div>
 </div>
@@ -1887,7 +1795,7 @@ git push
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master dff9e20] Add another Beacon
+<pre>[master 848611d] Add another Beacon
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -1900,7 +1808,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   bca1582..dff9e20  master -&gt; master
+   655bc1f..848611d  master -&gt; master
 </pre>
 </div>
 </div>
@@ -1965,7 +1873,7 @@ git push
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash --no-raise-error
 git commit -am <span class="s2">&quot;Add Glyder&quot;</span>
 git push
 </pre></div>
@@ -1984,7 +1892,7 @@ git push
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 93192a6] Add Glyder
+<pre>[master b69020e] Add Glyder
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -2008,52 +1916,6 @@ hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; fo
 </div>
 </div>
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-45-57eacbe947d2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git commit -am &#34;Add Glyder&#34;\ngit push\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git commit -am &#34;Add Glyder&#34;\ngit push\n&#39;&#39; returned non-zero exit status 1.</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2071,7 +1933,7 @@ hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; fo
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash --no-raise-error
 git pull
 </pre></div>
 
@@ -2103,54 +1965,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   bca1582..dff9e20  master     -&gt; origin/master
+   655bc1f..848611d  master     -&gt; origin/master
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-46-de7feceb5348&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git pull\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-110&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git pull\n&#39;&#39; returned non-zero exit status 1.</pre>
 </div>
 </div>
 
@@ -2201,7 +2017,7 @@ cat Wales.md
 * Glyder Fawr
 =======
 * Fan y Big
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dff9e207ded791e43204330c7d850d96e9f1f739
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 848611d5cc8d8ff2b577d6d1188f3e660827c93c
 </pre>
 </div>
 </div>
@@ -2288,7 +2104,7 @@ git commit -a --no-edit <span class="c1"># I added a No-edit for this non-intera
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 7906e39] Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>[master fb80bcb] Merge branch &#39;master&#39; of github.com:UCL/github-example
 </pre>
 </div>
 </div>
@@ -2321,7 +2137,7 @@ git push
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>To github.com:UCL/github-example.git
-   dff9e20..7906e39  master -&gt; master
+   848611d..fb80bcb  master -&gt; master
 </pre>
 </div>
 </div>
@@ -2366,7 +2182,7 @@ git pull
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Updating dff9e20..7906e39
+<pre>Updating 848611d..fb80bcb
 Fast-forward
  Wales.md | 1 +
  1 file changed, 1 insertion(+)
@@ -2381,7 +2197,7 @@ Fast-forward
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>From github.com:UCL/github-example
-   dff9e20..7906e39  master     -&gt; origin/master
+   848611d..fb80bcb  master     -&gt; origin/master
 </pre>
 </div>
 </div>
@@ -2452,28 +2268,28 @@ git log --oneline --graph
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>*   7906e39 Merge branch &#39;master&#39; of github.com:UCL/github-example
+<pre>*   fb80bcb Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * dff9e20 Add another Beacon
-* | 93192a6 Add Glyder
+| * 848611d Add another Beacon
+* | b69020e Add Glyder
 |/  
-*   bca1582 Merge branch &#39;master&#39; of github.com:UCL/github-example
+*   655bc1f Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * fd23f53 Add a beacon
-* | cf9a956 Translating from the Welsh
+| * 0d67a8f Add a beacon
+* | 2f847ed Translating from the Welsh
 |/  
-*   011e8a6 Merge branch &#39;master&#39; of github.com:UCL/github-example
+*   62d52f4 Merge branch &#39;master&#39; of github.com:UCL/github-example
 |\  
-| * 22d5658 Add Scotland
-* | 9d14e69 Add wales
+| * 1962056 Add Scotland
+* | 46ef3ea Add wales
 |/  
-* ce7f286 Add Helvellyn
-* 81a4d19 Include lakes in the scope
-* f1a7b1c Add lakeland
-* 584ec76 Revert &#34;Add a lie about a mountain&#34;
-* 8f92adc Change title
-* cce7ad1 Add a lie about a mountain
-* 9f9e774 First commit of discourse on UK topography
+* 8556f71 Add Helvellyn
+* f3f1163 Include lakes in the scope
+* bb8ce57 Add lakeland
+* 6d9e88c Revert &#34;Add a lie about a mountain&#34;
+* b440ccb Change title
+* 5cf2cf2 Add a lie about a mountain
+* 0219cd0 First commit of discourse on UK topography
 </pre>
 </div>
 </div>
@@ -2698,7 +2514,7 @@ git log --oneline --graph
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-10-30 09:25:46 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-11-21 10:20:52 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
