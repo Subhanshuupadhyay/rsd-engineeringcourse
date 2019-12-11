@@ -417,7 +417,7 @@ mkdir -p greetings/scripts
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">greetings.greeter</span> <span class="k">import</span> <span class="n">greet</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">greetings.greeter</span> <span class="kn">import</span> <span class="n">greet</span>
 <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Terry&quot;</span><span class="p">,</span><span class="s2">&quot;Gilliam&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -474,7 +474,7 @@ mkdir -p greetings/scripts
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Code</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Code</span>
 <span class="n">Code</span><span class="p">(</span><span class="s2">&quot;greetings/greetings/greeter.py&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -561,7 +561,7 @@ mkdir -p greetings/scripts
 .output_html .vg { color: #19177C } /* Name.Variable.Global */
 .output_html .vi { color: #19177C } /* Name.Variable.Instance */
 .output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">personal</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">polite</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">personal</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">polite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Generate a greeting string for a person.</span>
 
 <span class="sd">    Parameters</span>
@@ -589,9 +589,9 @@ mkdir -p greetings/scripts
 
     <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;How do you do, &quot;</span> <span class="k">if</span> <span class="n">polite</span> <span class="k">else</span> <span class="s2">&quot;Hey, &quot;</span>
     <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
-        <span class="n">greeting</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;{title} &quot;</span>
+        <span class="n">greeting</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{title}</span><span class="s2"> &quot;</span>
 
-    <span class="n">greeting</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;{personal} {family}.&quot;</span>
+    <span class="n">greeting</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{personal}</span><span class="s2"> </span><span class="si">{family}</span><span class="s2">.&quot;</span>
     <span class="k">return</span> <span class="n">greeting</span>
 </pre></div>
 
@@ -788,7 +788,7 @@ this on <a href="./04documentation.html">the next section</a> (<a href="./04docu
 
    <span class="n">arguments</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
 
-   <span class="k">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">arguments</span><span class="o">.</span><span class="n">personal</span><span class="p">,</span> <span class="n">arguments</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> 
+   <span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">arguments</span><span class="o">.</span><span class="n">personal</span><span class="p">,</span> <span class="n">arguments</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> 
                <span class="n">arguments</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">arguments</span><span class="o">.</span><span class="n">polite</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -1807,7 +1807,7 @@ E                 + How do you do, Graahm Chapman.
 E                 ?                   +
 
 greetings/greetings/test/test_greeter.py:12: AssertionError
-============================== 1 failed in 0.09s ===============================
+============================== 1 failed in 0.08s ===============================
 </pre>
 </div>
 </div>
@@ -1833,7 +1833,7 @@ greetings/greetings/test/test_greeter.py:12: AssertionError
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">from</span> <span class="nn">..greeter</span> <span class="k">import</span> <span class="n">greet</span>
+<span class="kn">from</span> <span class="nn">..greeter</span> <span class="kn">import</span> <span class="n">greet</span>
 
 <span class="k">def</span> <span class="nf">read_fixture</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
@@ -2038,7 +2038,7 @@ E         + Hey, CBE Mike Palin.
 E         ?            ^
 
 greetings/greetings/test/test_greeter.py:16: AssertionError
-========================= 3 failed, 1 passed in 0.11s ==========================
+========================= 3 failed, 1 passed in 0.10s ==========================
 </pre>
 </div>
 </div>
@@ -2175,7 +2175,7 @@ brew install reactor</code></pre>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-11-21 10:20:52 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

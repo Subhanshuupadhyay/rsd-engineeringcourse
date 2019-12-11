@@ -664,7 +664,7 @@ Instead, we define a <strong>constructor</strong> that converts input data into 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">occupants</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">occupants</span><span class="o">=</span><span class="p">[]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="n">occupants</span>  <span class="c1"># Note the default argument, occupants start empty</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="n">exits</span>
@@ -776,7 +776,7 @@ constructors.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Maze</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -827,7 +827,7 @@ constructors.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">maze</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">maze</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">maze</span> <span class="o">=</span> <span class="n">maze</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Note the default argument, occupants start empty</span>
@@ -859,7 +859,7 @@ constructors.</p>
 
     <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.name}</span><span class="s2">: &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{self.name}</span><span class="s2">: &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
 </pre></div>
 
     </div>
@@ -881,7 +881,7 @@ constructors.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
     <span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exit</span><span class="p">):</span>
@@ -1045,27 +1045,28 @@ constructors.</p>
 garden: Eric TerryG
 bedroom: John
 
-Graham goes outside to the garden
+Graham goes north to the kitchen
 Eric goes inside to the livingroom
 TerryG goes inside to the livingroom
 John goes jump to the garden
 
 livingroom: Eric TerryG
-garden: Graham John
+kitchen: Graham
+garden: John
 
-Eric goes outside to the garden
-TerryG goes north to the kitchen
-Graham goes inside to the livingroom
+Eric goes upstairs to the bedroom
+TerryG goes outside to the garden
+Graham goes south to the livingroom
 John goes inside to the livingroom
 
 livingroom: Graham John
-kitchen: TerryG
-garden: Eric
+garden: TerryG
+bedroom: Eric
 
 Graham goes outside to the garden
-John goes upstairs to the bedroom
-TerryG goes south to the livingroom
-Eric goes inside to the livingroom
+John goes outside to the garden
+TerryG goes inside to the livingroom
+Eric goes jump to the garden
 
 </pre>
 </div>
@@ -1097,7 +1098,7 @@ we can use arrays instead of dictionaries, but we have to first define all our r
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Maze</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1147,7 +1148,7 @@ we can use arrays instead of dictionaries, but we have to first define all our r
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1180,7 +1181,7 @@ we can use arrays instead of dictionaries, but we have to first define all our r
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="n">room</span>
 
@@ -1214,7 +1215,7 @@ we can use arrays instead of dictionaries, but we have to first define all our r
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Exit</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
 
@@ -1351,28 +1352,27 @@ Eric is in the garden
 TerryJ is in the bedroom
 John is in the garden
 
-Graham goes north to the kitchen
+Graham goes outside to the garden
 Eric goes inside to the livingroom
 TerryJ goes jump to the garden
 John goes inside to the livingroom
 
-Graham is in the kitchen
+Graham is in the garden
 Eric is in the livingroom
 TerryJ is in the garden
 John is in the livingroom
 
-Eric goes upstairs to the bedroom
+Eric goes north to the kitchen
 TerryJ goes inside to the livingroom
 John goes outside to the garden
 
-Graham is in the kitchen
-Eric is in the bedroom
+Graham is in the garden
+Eric is in the kitchen
 TerryJ is in the livingroom
 John is in the garden
 
-Graham goes south to the livingroom
-Eric goes jump to the garden
-TerryJ goes north to the kitchen
+Graham goes inside to the livingroom
+TerryJ goes outside to the garden
 John goes inside to the livingroom
 
 </pre>
@@ -1457,7 +1457,7 @@ John goes inside to the livingroom
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-11-21 10:20:52 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

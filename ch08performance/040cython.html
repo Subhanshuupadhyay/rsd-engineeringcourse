@@ -311,76 +311,10 @@
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> Cython 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> Cython
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-5f465735d1d6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;load_ext&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Cython &#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-64&gt;</span> in <span class="ansi-cyan-fg">load_ext</span><span class="ansi-blue-fg">(self, module_str)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/extension.py</span> in <span class="ansi-cyan-fg">load_ext</span><span class="ansi-blue-fg">(self, module_str)</span>
-<span class="ansi-green-intense-fg ansi-bold">     31</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> module_str<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span>             <span class="ansi-green-fg">raise</span> UsageError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Missing module name.&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 33</span><span class="ansi-red-fg">         </span>res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>extension_manager<span class="ansi-blue-fg">.</span>load_extension<span class="ansi-blue-fg">(</span>module_str<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     34</span> 
-<span class="ansi-green-intense-fg ansi-bold">     35</span>         <span class="ansi-green-fg">if</span> res <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;already loaded&#39;</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/extensions.py</span> in <span class="ansi-cyan-fg">load_extension</span><span class="ansi-blue-fg">(self, module_str)</span>
-<span class="ansi-green-intense-fg ansi-bold">     78</span>             <span class="ansi-green-fg">if</span> module_str <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> sys<span class="ansi-blue-fg">.</span>modules<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     79</span>                 <span class="ansi-green-fg">with</span> prepended_to_syspath<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>ipython_extension_dir<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 80</span><span class="ansi-red-fg">                     </span>mod <span class="ansi-blue-fg">=</span> import_module<span class="ansi-blue-fg">(</span>module_str<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     81</span>                     <span class="ansi-green-fg">if</span> mod<span class="ansi-blue-fg">.</span>__file__<span class="ansi-blue-fg">.</span>startswith<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>ipython_extension_dir<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     82</span>                         print((&#34;Loading extensions from {dir} is deprecated. &#34;
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/importlib/__init__.py</span> in <span class="ansi-cyan-fg">import_module</span><span class="ansi-blue-fg">(name, package)</span>
-<span class="ansi-green-intense-fg ansi-bold">    125</span>                 <span class="ansi-green-fg">break</span>
-<span class="ansi-green-intense-fg ansi-bold">    126</span>             level <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-fg">--&gt; 127</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _bootstrap<span class="ansi-blue-fg">.</span>_gcd_import<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">[</span>level<span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> package<span class="ansi-blue-fg">,</span> level<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span> 
-<span class="ansi-green-intense-fg ansi-bold">    129</span> 
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_gcd_import</span><span class="ansi-blue-fg">(name, package, level)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_find_and_load</span><span class="ansi-blue-fg">(name, import_)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_find_and_load_unlocked</span><span class="ansi-blue-fg">(name, import_)</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;Cython &#39;</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -406,24 +340,6 @@
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -438,7 +354,7 @@
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">f</span><span class="p">,</span> <span class="n">axarr</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">([[</span><span class="n">mandel</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">ys</span><span class="p">],</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
@@ -457,33 +373,15 @@
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-7570640dcfd5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Pure Python&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel_cython<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Cython&#39;</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">&lt;ipython-input-5-7570640dcfd5&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Pure Python&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel_cython<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Cython&#39;</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">&lt;ipython-input-5-7570640dcfd5&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Pure Python&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>mandel_cython<span class="ansi-blue-fg">(</span>complex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> xs<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> y <span class="ansi-green-fg">in</span> ys<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> interpolation<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;none&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> axarr<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>set_title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Cython&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;mandel_cython&#39; is not defined</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0.5, 1.0, &#39;Cython&#39;)</pre>
 </div>
+
 </div>
 
 <div class="output_area">
@@ -494,7 +392,7 @@
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAADHCAYAAADifRM/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4xLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy8li6FKAAAgAElEQVR4nO29e3xb1Zn3+12WZFm25LsjX4nj4CQ4IcQkhCTAQIGZAiWlw3RogbeF6RRmSmeGdsq0MD3tdMr0lOnQ9qVnCnOg5QAt0HIobaBc2nJJCoRcSRqSkNiJ4yR2fL9JsmVZktf7x5bkLVu2dbUlZ30/H30sb+299tryby0/a61nPY+QUqJQKBSKhUXWfFdAoVAoFMlHde4KhUKxAFGdu0KhUCxAVOeuUCgUCxDVuSsUCsUCRHXuCoVCsQBRnftZhhCiVQhx9XzXQ6GYjBDiCSHEf8x3PRYKqnOPkkCn6BZCuIQQXQEhWtP53qqxKOYCIcQtQog9AX12CCFeFUJcOss1twsh3pmrOp6NqM49NjZLKa3AhcA64P+KtQAhhHG+7q1QJBshxD8D/xv4vwE7cA7wMHDDfNZLoTr3uJBStgOvAqtg6lSHEOJbQoifB97XCiGkEOJvhRCngDcDxzcIIbYLIQaFEH8SQlwR672FEH8thNir/1wI8c9CiC1CiDuBW4GvBiyql3SnrRFCHBBCDAkhfimEyNFdf4cQ4pgQol8I8aIQolL3mRRC/L0QojlQ7x8LIURMX55iwSCEKAC+DXxRSvmClHJYSumVUr4EfF8IMSKEKNGdf6EQokcIcT7wP8DGgDYHdcUWCSFeFkI4hRA7hRBLdddvEkLsDuh2txBik+6zrUKI+4UQ7wau/b0QojT130L6ojr3OBBC1ADXAftiuOxy4Dzgo0KIKuBl4D+AYuAe4FdCiLIY7/0isEQIcZ7ulM8AT0kpHwWeBr4npbRKKTfrzrkJuAZYAqwGbg+UfSXw3cDnFcBJ4BeTqnA9cFHgupuAj0b5/IqFx0YgB/j15A+klJ3AVjSNBPkM8Asp5QfA3wPvBbRZqDvn08C/A0XAMeA7AEKIYrQ28yOgBPgB8LL+nwdwC/A3wCIgG61dnbWozj02fhOwMt4BtqENRaPlWwHLxg38L+AVKeUrUspxKeUfgD1onXbU95ZSeoBfBspDCLESqAV+O0tdfiSlPCOl7AdeAtYEjt8KPC6lfD9Q9n1o1lWt7toHpJSDUspTwFu6axVnHyVAr5TSN83nTzKhTQNwM/CzWcr8tZRyV6DMp5nQ18eAZinlz6SUPinls8ARQG+0/H9SyqZAG3uOs1ybqnOPjU9IKQullIullHcFRBQtp3XvFwN/HZjaGAx02peiWcux3vtJ4JbA9MhngOcCHfNMdOrejwDBxdlKNGsdACmlC+gDqqK4VnH20QeUzrCOtAVoEEIsAf4cGJJS7pqlzKi0GeAkSpvTEu/iniKcYSBX93t5hHP04TdPAz+TUt6R6I2llDuEEGPAZWjD0lumuWc0nEH7xwOAECIPzTprT7SeigXJe4AH+ATw/OQPpZSjQojn0Kz3FYRb7QlpM8A5wGsxlnPWoCz35LAf+LQQwiSEWAd8cpbzfw5sFkJ8VAhhEELkCCGuEEJUx3n/p4D/BrxSSr17WRdQF0M5zwJ/I4RYI4Qwo0077ZRStsZZL8UCRko5BHwT+LEQ4hNCiNxAG7hWCPG9wGlPoa3pfJzwzr0LqBZCZEd5u1eAZQG3S6MQ4lNAA7NPQZ61qM49OXwDWAoMoC0GPTPTyVLK02iuYv8K9KBZ8v9C/H+Pn6F57vx80vGfog2LB4UQv5mtECnl62jP8iugA+2ZPh1nnRRnAVLK7wP/jOaaG9TyPwC/CXz+LjAOvC+l1E+rvAkcAjqFEL1R3KcPbTH/K2jTQV8FrpdSznrt2YpQyToyHyGEBegGLpRSNs93fRQKPUKIN4FnpJQ/me+6nE2oOfeFwReA3apjV6QbQoiL0DbeqU1Nc0zKpmWEENcIIY4GNsTcm6r7nO0IIVqBu9GGq4oUo3QdPUKIJ4HXgS9JKZ3zXZ+zjZRMywR8WpvQ3J/agN3AzVLKw0m/mUIxRyhdKzKJVFnu64FjUsoWKeUY2i5HNSxTZDpK14qMIVWdexXhm3baCN9soFBkIkrXioxh3hZUA4Gt7gTIyxVr6889u9Z2x1PspeRn9nhe+nP8cuL9OFn4ZVbgnCxG/Nl4W014io2UFDoxiHG80sDAaC6MZmHM81JgGsWSNUYW4xiE9mwGwn8mQlYC8clOnfbR1z8+ZwHOlLaVtmMhVdpOleragRrd79VM2uUYCGz1KEDjBdly26v2FFUl/XCOTxeKI0nly+jE4hw3hd4PjlsCx7SfDn9O6Pf3HdrGwJ1nFnPlOU0M+8xse2cV11x6ELvZgdXgocHSji1Li4hQGPhpy/KGyreJxBuBLSs+uV5+bVfC9w4wq65BaTul5StthzGTtlPVue8G6gMxJdrRNsLcMvMlZwepFn88BMWvJ98wGmoES3N7cPnN1Bb3827HEjxeE5dfepCluT0UGEdCwp+Mc9wUagROKRJuBM5xX9yNIEkoXc+A0nb8pELbKZlzD0R0+wfgd8CHaMGsDqXiXpmCc9w3J+KP1bKJJP7psOc4GXLkceU5TdjNjjDxT9cI4qnbjGXMYweidB0Zpe301HbK/NwD4WyXSSmXSim/k6r7ZAJz1SHFM2QNPz7RGIKWTRCX38z+Hi1vR4urFKthIvBkvmE07Npk1HHGMua3g1e61qG0HXsdZywjid+nii2TYtJN/Hqms2wc/hyc4xac4xbaPUV0juXT7bHh8Zrwjxhp7S8GYMiXG/H62SymdGsEivhQ2k5OXaeUkaTvVXXuKSQdxR9pyBoUO0xYNUO+XNo9RfyqaQ3dHhunnYWMOHLIKxlhlb2D4yNldI7lh1k1kSycaS0pKRJuCKqDnz+UttNf22eXj9YcMZedTjziDz9mCRumOsctDPlyefz3HyGnzonXbWLgkn7OPLaUZXfsBqD5pWXkmHwU5bgpz3Zgy3KTbxgNXW/LcjM4bgl5FsxW/0QWo9JgkfWsQmk7c7StWkWSyQTxD+qsmXZvEW8P1LPa1k6BcSQ0HL3uir0M+8wcyV1E1pqGkPgBhveVMAx0nDPG6oL2MKsmOEcZzSLU5OeItyGoDn5uUNrOLG2raZkkMVceA6H7JSh+hz8Hhz+Hdk8RA5f0c8BZRbunCJffTOdYPsM+M8P+bByvlzO+Pzx0yqK9fuTyYT6y4qjuHhPlHnZX0e4t0vkXRx6+JvJMirlDaTszta3MnSSQCcKHCfEfdms75n918gKyny0m67VuXE5YZHYy7DOzY8tqcjb1kmPyMXaRi+FPXkze8ztD5VjfOkL/bTUM+7Nx+c0hi8jlN3NgaBUA1y4awTk+GtXwNdLzxWrpKOs9NShtZ662leWeIOkofue4KaL4QVtUcvnNPP7BJnJMPkruPMn4U4vIMfrY21tD16iNkTov9ls76dlvp3hLbpj4AVruWUnVjYc42FXBux1L6BzLp3Msn1/86SJa+4tZXTCxoy9WCyfWZw1/brXAmkyUtjNb28rUSYB0E380Iss3jLLCcoabGrTfuzz5eJ/ZwfELNzBugo4CL5ZTJvwOB0vufS9iGYu/qR23/ziH7sYCWq53YjV5yM0fZdSdTZcnnyrzQGghSl8//bbtWZ8nwflKRfwobWe+tlXnHifpJP7ZhD85tgZAlXmAIV8uXcCJBzay9J7IYp8J4xt7KbKu58iexeTUORl1Z7PY3seu51ezrbGeB9f//6H7B4ewsTYCiM3rQE3PJI7S9sLQtmoFMZJJwofZN13kGT2UrYk/sJZlyy6WbtHeNz+0gbJaFxff+g5V5oEp9Ui0EUB0lo7q4ONDaTucTNe2mnOPgXQQf3DOMRHxB4eULr+ZYZ+Zohw3TY9dFH9lAxTV9bPI7MRq8MzqLhbrPGXoOuVRkxKUtmcmE7WtOvcomcsdeZH+yNGKPshMVk1wY4fLb+bN9xvocNoo2ZmYpdv02EVU2KamydQPlyfXKdZnCl0X1RytWlyNFqXtmclUbavOPQrmc6t1PMKPJP7J26eHfLm827GEZXftQr5SQslPYp+XDMMraO0vpumSLJ76zZUz1m9q3WJvCNFs8VYd/OwobUdBhmpbde6zMFehTKcTfyxMZ9FMFxGvvrgX09YKyh5JUPzAsrt2MdaUz7HvNPLZT7w57f1nrmf0w/LQNWqaJm6UtqMjU7WtOvcZmIusMolaNEFrJprY1foMNAB1ub3Yc5y0/nI1A7dtjKHmkRFLhrnuir1h9wgSbSOYON8U8RXx3BkagbLeI6O0HRuZqG3lUhCB+UwVFk+igenLmj6GNYDV4KELqP3UgYTv1fzQBuo/tQPrvnEKjCOhe+r9gYP10W8CiXmXn64R6L0SkpEN52xAaTt2MlXbqnOfRCrFH6/w9YGQqkwDUz7Xr95PtiImC1//uctvJs/owbS1gkOHa1h2164oniIy9XfvCFhI7zLkyw1rBMCUhjB5l18sDSG41dyW5aYwyz1rurNUJ2zOFJS24yNTtZ1Q5y6EaAWcgB/wSSnXCSGKgV8CtUArcJOUcupfLQ1Jlfij9ek97dMSBbR7i8JCjQYTDDz47jXcvG4nKyxnIloNQSJZMvpzJicisOc48SYgftafj+vbw2wo3RN+D+NE49TXqW2shOrsPvINozE1BP2GFYc/h5f61rC5ZD81xn5As3aSZcErbUdZrtJ22mo7GZb7R6SUvbrf7wXekFI+IIS4N/D715Jwn5SSCvHHsq16cNxCu7eIn//Hx+j5mIcvN76Oc9zCq92r2FTcgstvprKmL7T9WW8h6BP+AhxxV3JgqIrVBe38qmkNt50XHj/D5TeHfgYj5PleP4ehX1SxaHsf/sNNMT1n7zc8VOS4GfaZp9zHapiwdII8/exV+Na4+PoFr4QdD8bKjpY8o4ddrjqwQo2xP64NJLOgtD1dmUrbaa/tVCyo3gA8GXj/JPCJFNwjqSRb/NFmYpm8iFJlGmDxFzXxPXPqIo6OlNPaX8wBZxUvP3Ep1mtayDN6plgnkxMSABxqrmbLc5fi9xnY3l8XCnf6y59exW9euJSWkVK6PTa6Rm24vGZGfUZGr3Nw5Ku2qJ/z9Dc2cfzpRnJMPtw+E8P+bA4NVtDlycflN7Ot61y299fR7iliyJfLkC+XtwfqWfLRE4z15bBtcAXt3qIpi2Ezf2cTFs6wz8xb/7Vp6jmp86BR2lbazhhtJ9q5S+D3Qoi9Qog7A8fsUsqOwPtOwB7pQiHEnUKIPUKIPX194wlWI36SKf5Y0mtNjkMd5LKiZq5bfpAzp0tocZXi9RrocVsBaH9hZei8IV/utKv2Lr+ZZXfspvq726n+uRHvFR0hS6b8oe3UPttBj9vKaWch3is6GBi1MDRiwes1IL1ZnPx2dN4Fo6Xa321oxMKgO4cetxXP/1Swv6eSbo8N8ZOy0L2Dr4FL+pH/K4uqNwVn/v6cKc+hT4s29TubiP435Mul9evL2XzvW1O+Q0hKB6+0rS9LaTvjtJ3otMylUsp2IcQi4A9CiCP6D6WUUojIk0RSykeBRwEaL8ielxWvZIk/1o5kJlcwW5aW3uvK8z/knZN1iKN5DJ3Kw3/dELXF/Qz7zLgM2hDxgLMqlGUGtEbh8ps5us7L6W9soub+7Zhf3U3TYxdhcrVxZM9iLPdkUfngdk52NZL/Tg5WWrBe08L4LRvIf2ZHTM9Rf/fU842cYqRsIwf/3IShykDWDet556cGGm/7AADXa4vo6Cyi/vadHH1iLfVj+aHnnmmuNUhwjvbJDy+mInuqbZLEqRmlbZS29WSathPq3KWU7YGf3UKIXwPrgS4hRIWUskMIUQF0J3KPVJGo+OO1DKPx8XX5zXSN2vB25kKBxJuXhddr0DKzF8P+nkrcu0oZW+Fm0XJn2HUuvxnT1lLczRMiWHbHbpp/uZql9+wga00D48CyLxzH73CEzolV/DNR9sh79Hk3UvKT7QD0v7CSVlcxnv+pwF2WRf0j7+G7ai0mi5eXdjVy88YdUQ1bQWsYQ75cPrr0Q969a0lojjV4vX7RKpHFVaXteO6rtJ1O2o57WkYIkSeEsAXfA38BHAReBG4LnHYbsCXee6SCRFOGJZLZPJL4Jw+52sZKePHE+Xiv6KBieTdFdf2Mm8D+TA5VNx7iSHs5rpEc3BU+lt66jw+/vIrOsfyQ+IMLP/q8kAC2P+QBhNKK6cWfCvRbvqtuPET79iry93eHdgwa39jLWF8Om9fvAyaG4vrX9w5/lD2uJfzb239J21hJSPxB+jsLAEJzm284VpIMlLbjubfSdrppOxHL3Q78WggRLOcZKeVrQojdwHNCiL8FTgI3JXCPpJGo6BO/f3S78lx+M/Z8J0XvFlPEIKedhQznSyxbNHeupbfug/Xnwy7t96y399HtKWbYYGZ/TyWlm5to/WUd3icqqb99b6jchONrJMjib76H97JGso5NHLO2GBm+MNwLQZ/IeJW9gzdPLaNkp5HHczdx3fKDWA0eXH6zNu9pGqdlpJSdfbUAWIxerso/NGUDSBwobcd0f6XtdNR23J27lLIFuCDC8T7gqnjLTQXxij9ZXhexxJNYYTlDVeVAKKFvj9vKWMGk4deuD0JvDQ3LONhlwp7vZKDPRinJ2ZWXCrLe3hd6f/zBDZz79b3s3HQuVTceArJYu88c5srm8popfMZK+5V+KkuGaHGV0rSjFrFkmOqSQUwWL7ual3D9qgMsz+0MbYJJdN5daTuW+yttQ3pqe8HHlolV/MGh6VyLf/K8nNXg4bcHV9PlsEVc3AniP9yE12ug5YQ9zJpJd5beswPp8QTED6w/n5aRUm1O1pPP719Zx+E/LSbv+Z0su2sX1mtaONxayZJ738O434rxXwvw+wxkmcZ589SyGe/lZ2EGF1PaTk/SRdsLtnOPdf4xmaKfqEN0KcImE9zAUX/73gmBzIC3M3fKPGSm0XS7hZ1/Ojfkn+zLlVMafrCBV393O0135LCu9iTXLT/IaIuNB7deC8S21TtTUdrOLOZL2wsytky0wk9luNiYQntO0xDaX1jJaIuNpffMvNo/k/WTKQRjfzS/pFkqsz2zucNI3vljlGc7+PJ1LwPhcUgWKkrbmcd8aXtBWe7RWjSpsGTC6xF9mrBI0e2Cx648p4nFa86koIbpS+nmppCnwHQ0P7SBc/+sFbvZQYFxBFuWO2LQqYWE0nbmM9faXjCd+2zCT/Z84/T1SCyxr75BWA0eaq399L4087zbQiOaYfjAqIW9jVk8+Z/XhwVpWogobS8c5lLbGT8tE43w54qY02npthxHimzn8muBjypsTlpfWMlwZ15CoUsXCsGhumlrBbct+m3oeNgmj+QHEZtzlLbPPpKp7Yzt3DNV+JNDe4IW6U6LMucJ+bq6/GZaXKV0OG24RnLS1gVsrmm7bxOFl3fSdXARNxVsD7Nq4kmQkI4obZ+dJFvbGde5p5PwITHxB3eltYyUsue9Zazb2MQis7bl+tBgBcarTyE+X4t/hUo2EWSkxseGwm4+9heHQnFHFsqUjNL22U2ytZ0xnftCEL52nYU3h87jla1rufzSg+zvqSTvJ4VkbRT0uK30uK2UWVwAoQBJJUmvfWbhvmE9XbeMUl0yyJXWw2GLTfmGUfTxvzMRpe2zl1RqO60XVIMeAjOJP7SYNE3S2Xiyjs9cp9jKmix+gOW5nVx3xV7eOrIc+9dgoN6IN99PS1M5xqtPsat5CV0OGzX3b09KnTMdy5Zd5Gy3MuozMuzPBibidUzOzBP+fSfnb54KlLaVtiG12k5Lyz1aly/tXFPUuQonfyGxLLjF2oBm8hqwZbk5NFhB9qls/IebqJyUHab+9r00Pbw+pvstdMof2g4PwQDg2qPN2+qz4GSK9a60rbQ9mVRpO20693g2ZwTF/0zPRjaX7A8dj3bhIdmWXTRuYMH/xlctOsrL642w/nxOXm9l8TfDgx8pz4HIHH+6EVfvEL1DVlgK66wnQp8FG0G6LawqbSttR0OytZ0WnXu02ekniz/IzjOLWZrbQ3V2n3bANDfb0KPNiTjdLr3L7cdo+WEpXNKfzGotaArfysH6k31YgXdfWsbypZ3ARAZ6/XddmOWe96kZpW2l7WhJtrbTonOfjckLSpMf6qsNv8M5buHJtk1YjF5uKt8NaTLdGkn8+mOLzE52PnYR5g7jFAtHMZVgeNfmJ9bykbKjoUz0epzjFt53rOGWsvfSyoKPhNK2IkiytZ3WC6oQnadAcBfXysIONhW3hFaZo82AErpX4Jojnsq4ro9U3kwEExCsrG9DLh/m9DemJsRVRCY3f5Q8o+Y3PTkZwpAvlyODizjiqZzvas6I0rYiEsnSdtpa7tMJf6ahyG/fXYupfISvX/BK2FAmmsWIoFjbvUX86IOP8E/nv0WVaSB0PNYFjUji1/v/Pv3sVbiXe2ioPYP7/kpq38ickKbpQNWNh2jZWoE9x8kLvz8f39JRbmrQvsOdfbXU2AZDc5TpFvJXaVsxE8nS9qyWuxDicSFEtxDioO5YsRDiD0KI5sDPosBxIYT4kRDimBDigBDiwngeLla/3qCw1q9r4q+W7Z/iRjRb1nG9+Ns9RdTbezg6Uj6ljKjqPs29gnVs9xRxfKSM6u9uJ8s0TnNXGSc/Nx7L4yoCtPYX07bBxZIXhqDDTMtIKV2efLocNlbb2me9Xml74ryo6q60PWckqm2IznJ/Avhv4CndsXuBN6SUDwgh7g38/jXgWqA+8LoYeCTwM2ri2bDxZNsmyiwu9ry3jEVXaLvgphOhPgu5/jhAu6eIl5+4lPNuOkJ5tiOsjOBwOIje2pmtcQTLH/LlcmCoivGPDzN+WaOWVkwRN8F44OP7D7OsJZ+2vzgP+fke7D/O4eV/WcmKwm5uKZtxrvcJlLaVttOQJGh79s5dSvlHIUTtpMM3AFcE3j8JbEVrADcAT0kpJbBDCFEYzBY/232iEf50w9bbqrfjHLfgWqfFrAjGscA4IdSgSLcNruDC/JNThqLOcQstI6WMbnKRZxgLpcQKlqG3dCY3humIZB3Zc5y0OVy0X2Gh5u1Zi1BEid/hIO/5nfA89H1+IxcUdnN54ZEZr1HaVtrOBOLRNsS/oGrXiboTLaEwQBVwWndeW+BYSglaLKsL2jncOrHQMOTLZY9rCW1jJQz5cjk6Uk6e0TNtOYvMTvK25tHqKqbLkx8qYzIOf86U3WORzolEntGD7/VzGF06fT0U8dP+wkr6Lx1j2J9NvmE0Hm8ZpW2l7bQkVm0nvKAqpZRCiJij/wgh7gTuBKisMsR1b70vbpVpgMePb2RJdQ87+2rpctgYOW1jyYteXrnWxHVX7GXYZ6Zr1EZ5toMhcsN2gQ35crEaPDTe9gGtrmK2vbOK4Y1N9LitXLXoKKBlL2/3FPHsexu454pXo67n5DjWZRYXo+VGmh5ez3n3HsHvcMT1/IoJDOcuYei/BVeWNvG74+dxXcmBhHesKm3PjtJ26olX2/F27l3BIakQogLoDhxvB2p051UHjk1BSvko8CjAqtXZSQkN97ml2hxUu6cIV6GZluJSXK9Vk1PnZG9vDV0HF2GoGaHO2stvD67m0xfs1oa4AYLDVYvRy7lf38eHf7+W0U0ujlvLsJsduPxmnv/dJdSta6fdU0RVYHQ70xetF38wQW7Tz5cz9ucOlt21C38yHvwspvmhDdTfvYMPv1aK6Bxn+Tm7WXfBiYjzz1GitK20nRYkqu14p2VeBG4LvL8N2KI7/tmAZ8EGYCiaOclomDwnGWkHXVCIVoOH8mwH9hwnHbd78HoNWK9pwdKpPe6hwQrqb99LlyefzrF8XH4znWPaULVr1IbbZ+LY4w0UNXnJ25rHu78/ny5PPi0jpXjz/ZzsKgn5oAb9UKfWN9yzYMiXS5cnn+P/fh5ZXqJKDqyYnSyvlthgc+N+Pn/hO6FoeglY7UrbSttpQaLajsYV8lngPWC5EKJNCPG3wAPAnwshmoGrA78DvAK0AMeAx4C7Yn+kxLBluUND0jyjh8bqNkoLXDQ/tIFF+zwsvaOVlhN2er6wkSODi+j22NjWdS4trlK6PTZa+4sxXn2Kpbfuw/zqbipeOgVoDcPlNVNcM8iS/4FXjq4KNZ52TxFtYyVhmw30DPlyQ5bTeLYI7URTJM6yx/tp7S8GCJuKiAalbaXtdCYRbUN03jI3T/PRVRHOlcAXY65FjEQb9yLI0IiFnN4sjG/sxc9EHsMTizeSs87HqNfImS21DK6QZJV6aLtvE9Xf1UKS+tra8VRU4v1qKe33jjPiyMF9hZmlt26n+91iXjq8hqrfZfFnX49O1KZ/7KTp+os49ykfWW8rd7FE8R9uoupGYE/se/KVtpW205lEtA1pvENVj37YGq34g9ufe9zWaYeJ5l7Bya4SxnvN1D/yHmXTlBVsMNl/2EjVIxNCb+4vRZjGMQ6jeSCYtcUj/VxnsC4Aw/5sjFefwvBgJVlvz54oVxEdrtfqgNOhWBxtYyU0WNozJASw0rZiehLRdtrHlomWye5ZXZ58tr2zipamck48sDHiNZUPbmfprftCSWlno0wnfsctGyjd3IQc0bwh2ja4tB1knvxQnsjgC7RG8P7bywFYek9091NER1dfAS/taqRzLJ92TxFvdGvfc9BVzEBmp3JT2j57SUTbGWG5B4nGsgnGt7CbHVx+6UFaXcWc7Ep+Mq/8ZzQRB2NTH3+6kbYtFnxrXFy6uGWKz/Gwz0zNunaaHl6v4lknmeBuyL2v1TE0YmGVPSnrnHOK0rYiEoloO+079+CwdTrx6xPywsTGDL3rV45ljDP3bCLLG8h6kgLq/8vD+H7tD9G1tQJ7jrboNeybGLa29RUq8acQ6zUtdD24gbzKk/NdlahQ2lZESzzaTutpmWjED3DEXUm7pyhM/MM+M62uYgZGLYy6s1MqftBiQARx/LCGVlcx3R4bw/5shv3ZuLzmlN1bAW33bcL1Wh3FH4iIW/DTDaVtRbTEq+20tdxnEr/eHSs4H/nc4bVcvp8ew8wAACAASURBVLSZPKOHFlcp3is6GH1tEdZrWrDOTZVDWLbsovWW1VjsXqwmDy6vGbfPRO2nDsxxTc4OXK/VcVXpbsqzHVTf98ewTR6x5BKdK5S2FdGSiLbT0nLXi98Z4QUTMTCc4xasBg/rak/y7u/P5+g6L94rOjj+4Aa6Di7izD3zkyQgb2seHU4bPW4rbp+JUV/a/h/NeAyPaAG1CowjiW5gSjlK24pYSETbafVX0buFnfYVhywX/X+r6YIW1eX2kvcXYxxZX4fneTtL75nfzRRlj7wHj0DvS8vIMfkYGrHg/sLGMK8ERXKwNg/i8pt55tRF/MvS3wNzk2c0FpS2FfGQiLbTwnL3I8IsmkHdfOO2wRW0e4uiilaXZ/SQY/TRf+lYyuscLQMtxQyNWPB6DUr8KcJ/uIlXjq7C8Xr5fFdlCkrbikRIRNtp0blDuPCDw1OrwUOrq5h2T1HErc9B1zDQFpq6PTZGfUZMFi8Dt0X2/51r6u/ewYgjB687TbIaL0Da7ttE/X95+PvPvYQty512VrvStiJeEtF2WkzL+GdIZlBr7Q/Fn7YaPAyhCX7bagtr902k8Br2mdl5eCklO43Upll8CzliQHjT5v/ogsK0tYIbCt6h6jMDVJkGwj5Lh8VUpW1FvCSq7bT7q+gXlQqMI9jNDt46snzKzrjjTzeG7Zgb9mdTt6SLwRXptxux5H0DRnd6JWleKAyMWtj9T2upMg2k9UIqKG0rYiNRbaeF5T4TVoOH61cdYP/9jZj+sZNaaz8Ai+19dI3aAFvo3JYTdha/kX5RpEt+8h7eu+fHs2GhY72mhY8f7gv9nm5TMjOhtK2YiUS1nVadu96ymUz/bcOMdpUw6M4hx+Sj4+gisko9FOQPA5Bj8pFXMkLfygIqo08kM2fY2tOvYWYybfdt4vzrj3BZUXPGWe2TUdpW6EmWttNuWmY6r4Ha4n7GvVmUbm7Cek0L2UOCpbfuw/d6Kc5DJXR0FjHiyKF8Z3o28vz93bOfpIiaYNhavfDT3WpX2lZEQ7K0nRaW+zhZtHs1rwF9Rvf3HYtDQYrcvvAV+cXf1BaW9NuuTzywkay302vBKYj/2In5rsKCYvkeE+usB9J+05LStiJWkqXttOjcx6SRf3vzRu64dFvIYyAYHOnQYAUAbX2F2H8/s8vVknvTU/yK5LJ23zhV5s5E8qTOGUrbilhIprajSbP3uBCiWwhxUHfsW0KIdiHE/sDrOt1n9wkhjgkhjgohPhpNJfwyi7plnaHUXkDIS6BjWzVtfYWM9eWEQpEqzk6aHrsoIP6JechELBulbUW6kGxtQ3SW+xPAfwNPTTr+Qynlg/oDQogG4NPASqASeF0IsUxKOeOKyziCMouLFlcpVpOHg10VrLJ3cLCrAvc5Xhq+0oevLWKiecVZgu/1c7i5ZGeY+JPAEyhtK+aZFGk7qhyqfxRC1EZZ3g3AL6SUHuCEEOIYsB4tCfG0DB8WDFyiuYENAFX0h34C+KK8uWLh0fzEWhpqz7DcGp6kIBnDVqVtxXySSm1DYnPu/yCE+CywB/iKlFLTLOjHl22BY1MQQtwJ3AmQY7fR/L21yBEDlXW9nDldQmVNHz377YwbpUrddRZTf/teBl6rYzjHHJa/0+HPSeWcu9K2IuWkWtvxdu6PAPcDMvDz+8DnYilASvko8ChA1cpC+ZEVRwEtQFKNbZBFZictG9y09hfTGdgkkcqEBIr0xXpNC20AO/K1RmBMfD5yBpS2FXNGKrUdl5+7lLJLSumXUo4Dj6ENTwHagRrdqdWBYzNiEOO0uoqxmx2UZztYbWvHavBgz3FSdeMhjFf3MrrJhTCrjC9nM20bXLzRvTwUUAuYEnArUZS2FfNBKrQdV+cuhKjQ/fqXQNDb4EXg00IIsxBiCVAPzJpY0cA4F5e0UmUeoMA4QoFxBKvBw7bj9VTvsFJf3IvXbcK1eQ3jlzVOW07PF9IjWp4idRivPsW21ZZQftFko7StmC+Sre1Zp2WEEM8CVwClQog24N+AK4QQa9CGrq3A3wFIKQ8JIZ4DDqOtFX1xNm8CAJPwsd7aEvZAtmw3nzt/eyh4UkPtGZr/uoza70cOnnT8wQ34c/2UzXYzRcbTdt8m3h7QtmcnMjeptK1IN5KlbQAh5fxHmlt2fo788Yu1U/5jBWNaHx8p48jgIgbeLcddMeFfsOJRFyduLEAuH8Zk8jPiyKH+9r3z8QizMn5ZI1lv75vvaiwo2l9YyVcbfhe2k0+/TTsYFvWTH+vl4IGxeQldqLStiIdkaDutYsvYstwR/1vlGT0MjVgQPljZcJqVDafJKx+m+34fVZvaKS1wYc93kpufvjsWB5YnfwrhbKe2uJ9v7bghlG80nVHaVsRCMrSdVp17kMmNYNhn1lJ57fdSZ+2lztpLQa6b+uJeaq39rCjspszioiDXTfMTa+ep1jMzUqFiXicb7xWaf/C3926e55pEj9K2IhqSoe20iC2jx5blxjluId8winPcwvb+Oo7sWcxNV23H+p+aL2hwG/cis3PK9ek4dD3xwEbGjeOzn6iICc+1F9FQ28bqgvawKY90jQ6ptK2IlmRoOy0sd4OIPO//9kA9hw7XsGLdyTBvgyrzALecs5vybEfo1eoqpijHTfsLK2l+aMMcP8HMeEt8+AtUzOtkY351Nx1OGy0jpfzbmzfOd3UiorStiIdkaDstOneI/B9pta2dumWdbCpuATTLR/8qMI6Ezr24pBV7jpPa4n4o8ML68+es7jPR/NAGsvM9GHLVRvNUULq5iYFL+ll21y4Ou7UNoxPJqNMjcbPStiIeEtV22nTuoDWCwoC4Hf4cjo+UcWPlPqqz+6YkiAWmNII8o4dDzdXIEQPs+mAuqz4tuTVOrLmj5FjGMJQpZ7ZUUfRuMU+8cmXaLqwqbSviJV5tp8WcuwEZcu1xjps0S8cEm0v2h52nX4yK5OTf7bGRne9h6dedpMNA8fjTjdhzhwAtVZq/p2eea7QwMW2toC63ncs+3jzfVZmC0rYiERLRdlpZ7jDhv1mY5abG2B8apk5mstfBs3suxuU14/cZ6PqhiaaH19P6y9VzUudInPz2RuwlQxTluCnKSc8FvoVC0LMAJjrGwTS04JW2FbGSiLbTrnMHrRHoG4J2zD3lFXTw7xzLR5jGWV3Qzk0Ne6mwObn4gmNUlwwCmhjnivHLGmm7bxMl67uosQ1iNXmwmjwU5bg58YDaQp4Kel9axu9/fAlHR8o54q4MG76my7x7EKVtRSwkou202KG6anW2fP7l0inH9ZWf7r+Vc9xCu7co9Hsw8E7nWD7DPjOtrmIG3Tn0ny7E3Gug9jvvIz2eiGUli96XllFhc2LPmXBnG/Znh+J6K1LDiQc2suTe91i+x8QNRe+HOs+/2dwxbztUlbYVySAebafFnPt02LK8oUZQmOWO2AhsWW6qTIR2chUYRxjy5WI1eBj2mbUsOE3l1P3Kj/GNXaTqX1nTw+sx9xrI8gpWFx8J81Me9pnJM4zR8/o5tG+vCiVAViSXc3/SieOTF2M1vIdz3JK2/u6gtK2IjXi0nZbTMnqCQ9jozg2fw9zfU8lpZyEi14/xjakbQHxXJb7jz32DFhE2u2SU8vd8jC71hMRvNXiwGjyhLPejPqMSfwrx/I+fwn84xQsvXTLfVYkKpW1FtMSj7bS23CcznYUD2iJUcMGhwDjCAWcV9cW9vP/2clZ8/9i0HgbND22g/u4dUQc/MuTn43c4Qr+fuclLfuVG6u2t1N3fy6ZARpVgZhWXfyLLSu+QFWu0D6uIGtdrdZw5XcLNJTu1WOl/Eb6700/6b49X2lZEIhFtp73lDuEWTrRD7dW2dhaZnXjz/TT97+qI5xjf2EtRXT/tL6wk6+19+K5ai7G6atpFqqbHLgoTv+/1c1h66z7EdX3UWXtD1ow+ZZZV1yAuXdwSKkeRPKzXtLC5cX9op+flhUewzdBZphNK24qZSETbGWW5x8PFFxyjub9U29Wn2/xhKCuj6/Ei6ot7Oe0spOnh9VTW9TLozcNzOtwWan5iLVm9JuqWnKH9hZUYthVQ/tB2aq395O0xUeTpDRN+cPNJcAHMavCEYoa0v7CS877amxa+yguByVbpdNEXFyJK2wubRLWdkZ37TENYvatQt8fGvrZqTCY/TbdbWLYLTn9jE5b1vZRubqLCZmSR2UmeYYwVF3YDsPPMYrJLRmm7bxPV393O6W9swmRx0bjxBABdDhvlD22n6N1i7GZN+MtzOyPWRb/DEODAqI2qGw8p8SeRrLf3YdpagdUwa8a7jEBpWxEkUW3POi0jhKgRQrwlhDgshDgkhLg7cLxYCPEHIURz4GdR4LgQQvxICHFMCHFACHFhXDWbxOTFp5mGsEO+XFx+bRUfIPsP+WSXjCLMZoou6aS+uBfHLRtCw82luT3YzQ7yjB4urjxJvb0Hzyo3fZ/fSM3922msbgs1lBFHTmDXmHZtgXEkop/y5M0pBcYRVhe0U/RuMeOXNarhaxJx+0y0jJTS7ima/WQdSttK2+lOvNqG6ObcfcBXpJQNwAbgi0KIBuBe4A0pZT3wRuB3gGvR8kvWA3eiZZOfE9rGSmj3FPFG93JaRkp584Pz8HbmUvRX7TRWt+F92U7vkJW63F4+8i/bKc92hM0b6ucTzQctyBv6AKjL7aU824Hd7CDLNE5rf3GY+Kdj8mdWg4e63F7G/62P4vIhjNVVKfgWzj6MV59i8Mph9jZmccRdyWF3VbRxOJS2lbbTmgS0Pfu0jJSyA+gIvHcKIT4EqoAb0PJPAjwJbAW+Fjj+lNR2R+0QQhQKISoC5SQV/RDW4c/B5Tfz/O8u4bIrPiDP6GFz4366PTZW29pD1s7Kwo4p4g2mPANt6Or1GrBu6uWSihO0bK2gyqzlSC4wjvDlxtd537F4VvEHCcbw1lNmcTHozsHXtjCmEtIB6fHQ9PB6TEOnObJnMeOlXn5wyS9ntIKVtpW2M4F4tA0xzrkLIWqBRmAnYNeJuhOwB95XAad1l7UFjoU1ACHEnWjWD1VViTvtBEXmKx/DbnaEWSoQWPgxTiwK6cVry3KDUdv5l/2HfOx/1U6ttV+Lp13smCL0ywuPAFNjgOgJS4isawQuv5ket5WBPhtT9y0qEmHZXbtofWEl46Ve1tefiOlapW0Npe30JB5tR925CyGswK+AL0kpHUJM+FdKKaUQ02QlmAYp5aPAowAXrDZJm5A45cz+yPpdfXravUW0e4o4MFTFkuoeqswDgfPdVGf3hc4LLgJNZ5VYDR5ci6HR2o/d7IhowUS7Wh08b3KEv0ODFfS+VE39Q9ujKkcRG9l/yGf4Qh9NP1/O/deV8r2GX816jdK2htJ2ehOrtqMyK4QQJjTxPy2lfCFwuEsIURH4vALoDhxvB2p0l1cHjs2KLbY2NHFdlpuWkVIGRi1cXNIaOhYk3zBKvmGUKtMAK8xnqDINhI4FX7YsNweGqihb08V7L4dH3NOfFyx7tkWmydeG4nN/twzHci25QTCrTrpl18kU9N/bmXs2ceKBjVR+qhUxYuCaO9/lc0tn3zGptK20nY4kQ9vReMsI4KfAh1LKH+g+ehG4LfD+NmCL7vhnA54FG4ChWOYkbULG3BDyDaNcVtRMR6e2ohz0B40k2tB9Jgk33zDK56ve5pZzdrPxYwd48cT5oYYy+Zpp6z5LQ7Blubnqh+9w88YdgJbswPf6OcSwC12hY8nKMzQ9vJ7jTzdi6ZFcc/Ue6qy9nPdf2sxJpCQYepS2lbbTlUS1DdFZ7pcAnwGuFELsD7yuAx4A/lwI0QxcHfgd4BWgBTgGPAbcFeuDwfSWznTxOGxZbtbXn8DlN8ck2uA5+vfD/my+2vC7mMqYXN505wfzZC7fY2KVvYMyi4vFa7Q/pCI2aq39bF6/D+PxHK7+0ruhnKNLf9PNc4fXRkx6MQmlbaXttCQJ2o7KW+YdmDaAwVURzpfAF2e9cxREM1cZxDluIc8whtXgweHPCVkTUd8rayK29h3l2+Kqb6Qy9d4EwYbpHLeEXNVcfjMur5nsklF6vrCRskdU8KVocL1WR57xNOXZDv7xk78N+1sXGEdoqSol3zBKYZYbwzTxEpW240dpO3UkQ9uQATtUg1aOviFMXnxy+HM4OlLO0tweOsfyQ+JPdsjXeGKVRHIX0zPsM+O9ooNaku5Nt6BxvVpO902DLM/tDJt+CHJT+e6YOsD5QGlbEYlkaTsjAofB1PlK/RDWOW5hnfUEDZZ2riz4kBpjf0pieQeTHE9+xUrwD9PlyefI4CKOP92Y7KouWJoeXs/AbRspf2g7u5qXhI7rxV9lGqDKNJDW8dz1KG0rIPnaTgvLPUsIbFlGnOO+Wc/VD2dtWV4Gxy1UmQZCoopPkNOv+kSTpm3yPSdbQZEsnO39dbh9Jhyvl7N4X2qz5ywkan4HlV89CncW8+nc3aEFRgifX55IYTe/K3pK20rb0ZJsbaeV5W7LMoZeM56ns3RqjI6QNROt+IN5LPX5LKM5N1oi1WXy8KrO2ktLUznWM+Nk92mftd23KXR+8xOJJ1tYaBx/uhHLll3U5fay2tYe8vmGyOJPJ5S2lbZnIhXaTqvOXU80jSHYEGYS9OTPErHkEm0I+i3hvzt+HtYWIz0Xwvj+wxx/upGcTb2AtqBSUT6gvAx0ND+xlsX2Pqp3aCkhgptwJm+8SceOfTJK20rbelKl7bTt3PVE2xAmzk9c7DPXJ/aGMHGt5kp223k7ufmzb+Av8GPaWsHSW/dRX9xL9Q4rKwq7yTH6WHbXLgAct5zdG0FOf2MTxs5s2voKGfZnAxPxxGH6XZnzPSUTDUrbStup0nZazLlHS7ARTDd/Gcn7ILX18QbqE93cZXC+Mt8wGto6fs8lr/H9P3wM291LMHlPUJerWThdozaCf76eCyH/meTXP1OouX9iO/uHd2/i9LWdrC09PeuW+0xCafvsJJXaFprr7vzSeEG23PaqffYTJzHbItVcNQSIrhHAxIKUUxfxLxi5L5jdHrQgTC6/mRZXKW6fiRNtZdTfPjUR8tlI3+c30nexj+LyIe6uf3Na98BgB/XJj/Vy8MDYvCRSVdpW2o6FZGo7I6ZlpiPWIW1q6xLdUHZipXtiEarKNBCydoL/sYOR/+w5WkLc3PxRTjyw8awfxgIs2tqJGDEwvK+EI+7KiOdkwpTMTChtn50kU9sZNS0zHbO5mukbQSotnmiHssFhrN6NLGzxxKjNu1kNHro9NoxXn+JsSn1w4oGNLLl3+t2M/mMnaLhglDprL1XmgbCt2JmwoBoLStsLi7nUdkZb7nqicTODubF4YrEaZ5pTaxkpZU/r4rMust54zcyhZ5sf2sCR9vIpcc0XKkrbC4e51PaC6dyDpEtDmK0RRPovPHnDwqFfr6D650bq796R/AqmKb7XzyHHMobn2unzcNbfvQP/kIltXefS7inilb7VfHnrzVGnH8tUlLYzm7nW9oLr3INE0whA50+cgsYQrZUzbSjVqzsxv7qbEw9snPH65ifWcvzBzLaAjj+4AdPWCmqt/ayyd9B2lWHKOX2fn/gehDeLHKOPA0NV7Gpewh0X/xGIL0ZKpqG0nVnMl7YXbOcO0TeC0PkpaAgzNYJIm0BgwttgRWE3vtfPwVsys+dEUYkT+6rujIzj0fzEWs7cs4ml9+zAnuPEbnawyOxkxbqTwITom59Yi7yhj6bHLqL1l6uxtWRhvPoUhw7XcP2qA6HFurMFpe30Z761vSAWVGdiNv/hiNckeZFquhRqkXCOW2j3FIV+H/UZOfep6euetaaBCtsAVpMH8ZMyQJu3S/fhrqGsjKGf2WjIOYO13kPz5ctYaz6C1eDRXgUeunbk037GQfP5G1hSfYZaaz/Dxb3kGcYYrs5mT80GKuu6ebdjCd3FWrLoi/OOTb3XDGFRMxml7fQkXbS9oC13PdHOV065LkkWT7TD2EeO/BnPHV7Lc4fX0jVqA+D4J82hz48/uIGT354YwjkeGMWe42SR2cnyew7R/MRalqw8M+twd77x9/SQ+50C6qy91OX28leL/0SVeYAC4wgFxhGsBg9HBhfhO5gPBV7a+gqxmx2strVjNzvIM4yx9Llh1paeZk3ZGVbb2jk+onUAme4GGStK2+lFumh7VkUIIWqAp9AywEvgUSnlQ0KIbwF3AD2BU/9VSvlK4Jr7gL8F/MA/SSl/N6XgeSLaCH1TrkuCxRPJytHv7gP4woo/8r5jMduO1zP++Rx6v2Ol/u4dND+0AftOoMKDNPpD51uvaSFvjylkFVy/6oDmYjbJ3arpsYtYdsduHLdsIP+ZubV8mh/aQG6Nk+G+XJbdsRuA4U9ejPx8D8M+M1aDZ2rCZiN8rPIQfOIQwJShqcvoofUrgrUGD+usJ8g3jNJgaZ+62WOGzktpO3Cd0nbcpKu2ITrL3Qd8RUrZAGwAviiEaAh89kMp5ZrAKyj+BuDTwErgGuBhIcTUFYR5JB4rJ+z6BCye2SP1uVma28PlS5sZ+m9B8ZZcmh5eT1FdPyV3nuTypc3U23swba3AWF3F2n3jocw3QfepXc1LpkTeq6zpo/elZSHx6y2kVND0mOYRYGhYRm6Nk1X2Ds7711aGP3kxAHnP78TxejnN320IPXeQ4OaXBkt76KXPC1pgHKHbY6N4i+YvHdzFF8dWbaXtydcrbc9Khmg7qjR7HaClUpFSOoUQH8KM+w5uAH4hpfQAJ4QQx4D1QFrl2IrXygkrI06LZ6Z5yuCCU/N3GxAmQc9fejAA8pUS+JSTPKOH1QWa4At+H3mhJTd/lNwt+YC2acK2so96Wy/OT1kYX9OA/PA4eY19tN23iervbufMPZtw1WnBnE48sJH8Y2AakeQfG4ZdH0wp33DuErqvKMd1Diz+pvZnPf7gBpbeswPHLRtwLM6ibkkbAP7DTcBKFpmdLHoVDg12cHzDBqrf8OOq83HzZ7eFLJfJUfBmEnRdbi89n7OGHYvVslHanqEMpe2M1jbEuKAqhKgFGoGdaMmF/0EI8VlgD5oFNIDWOPRjozZmbjDzRjwLUtOWFWNj0DcC/fD17YF69rQuxv6FXtaWnubNU8tYZe/gw10r8F7RAYFh6pShXhAjfHzJBzx76cUMV25ivMZNhc1JXW4vrt+Y2fazxXg3r2V18RG4vhfXRytYzAkGRi20v7ASn2OMkntnjvPhP3aCkmMnGPnGJo4/3Yi9ZIjFxjMUvVuMz32GBms/eUYPe1+royjHzccLPghZXt0WG5Z1JzmUW8OVFx6eEt50+ih4EyFl8w2jVJkHqLXm89IDH6Hh338+JYFBrNan0vYMZSltZ6S2o+7chRBW4FfAl6SUDiHEI8D9aHOV9wPfBz4XQ3l3AncC1FSl1cg2YWJJfqwnuNV4sb2Pi0taNaHnullkdpJ38wHe2bSaal8LBbmzu0YZcn0UXt5HwU291L2picNq8HD5Z3aHnZdnGGPYn43bZ2IIyD6VHXV9gxHtXK/VYTF6yTOMkWftx252AJq7m93sCDVYYGJxqOE0S3N7ohL/dNjNDo58tjumayKhtB09StuZo+2oOnchhAlN/E9LKV8AkFJ26T5/DPht4Nd2oEZ3eXXgWBhSykeBR0GLnBdP5ZNFMq2cUJlRhGidbOE81nc5q23tHKCKFZYzAPxd7R9DkfXeO7iajn+vhOdPhglnMlVm+HLj6wAMvaNF4tMv2gz5cnH5J7wUhv3ZjPqMVN14KK5n7R2yUpSjiTcoeABrbk/ExSS72cFbO1dx00d3Tyt+/TBUvygXjFliy3Kzs6+Rv6v9Y+jaeKx2pe04ylTazghtR+MtI4CfAh9KKX+gO14RmLME+EvgYOD9i8AzQogfAJVAPbAr6hrNI8mYq5xS5iwNQR+Q6Y7ybQAhf1Z94CVblpuiSzr52M27qTINRCwreG5QVA5/DrbsqRtIgo1B3wis17TE/nABsndbGbjaFYryp7/HZGHbstystw6w/rqWGUU/3fFgUKrD7ipqrf2hZMFxduxK24mUqbQddm46aRuis9wvAT4DfCCE2B849q/AzUKINWhD11bg7wCklIeEEM8Bh9G8Eb4opfRPKTVNSUUjgOgbAkz8N9cLxJbl5tv1W0L/2WcjOH8HE0PiycmMrQYPLSOlNPeXUkp/jE80QeWD2+n0buLItWC3O8LqDLMvJsUS7S547kdtH4AtWF584kdpOznlKm1POR5kHrUdlbfMO0Ckv9orM1zzHeA7MdcmTUhVI4CZG0JwKDuTICb7Dk97n0mLNBCwdiY1gjzDGGJLSUzPEAnHKi81OW5cfnNYct+ZxJ9IeN4p+URnEH+WiNzpKG0nuWyl7dD7+dY2nEU7VGMlUX/hWcufxp84mhyWweTE+te095nkY6s/Fhy6jl7nCAtcFA/L7tjN6V8vYcf/s44hX+6UedPJvrqxiH+2RNAziT/Vf8dMRGk7NjJV20r5M5BKKyd0j2msnVhyWMKEoCJZPpMTJzj8Obj8Zt751gb8X+iNe7FJT9aaBpyNHspv34vrS+awz2IdqsYUM3yOshEtNJS2oydTta0s91mIN25HzPeZ5g8Za5yUaK2GKvMAlV89hnuLneNPN9J236aY7jOZ4cVWllT30PzE2rDFrGjrN53lMhOziV9Z7TOjtB0dmaptpf4oyTRLZ7KVM3k+ErSt3Fw8xhJ7H8ZbT8Vb7TCuX3WA8uypC0/TEW+QL2WxJw+l7ejING0ryz0G5soSnG3OMhrRRGPlfP7Cd7h+1QFGfcaEI+1ZtuzC/E85/PbdtdOeEx7jOzZLJnRdlLFPlNUeG0rb05Op2lYtIEbmwsoJ3WuG3YDRWDzReB8M+8wMjVhmTNo7EwO3bcRTKHAs1+J3NFxQwfGRMjrH8rmy4MOwukyue6xEa9Gojj0+lLbDyXRtK8s9Duay85h97m1mo3QbjQAABuJJREFUK2E6K2fIlxt67/UaaLtvE8I8/XzidPR+ZAxbu5+6ZZ30vrSM5q4y9jy7Omz4Orm+sTIXiZ8VGkrbE2S6tlXnHidz3QgSaQgTgYfcOPw5tI2VsL2/juMjZQz7s6l4woxvjYum/3cV7S+sjLpeA7dtxGTxsvyeQ9RatY0i1SWDfOz2d6jO7otw//jEH9P5ympPGKXthaFt1RISIBVxO2a8XxRBm6Yb0gaHsc5xCy+fWcmKwm7efL+B7JJRlrx5gPqvFWPPcTLsz2bfL1fj92kBr/xDJvKPGil/aHuorLb7NiEuGsKe344NQsGU1pTBey+v5sBV3lD8kESeNeZrVMeeNJS2M1/bQsr5H+42XpAtt71qn+9qJMRcNQKILb725IYwOG6h3VsUls9yZ18toz4ja0tPA9pcZTANWmt/MTXflozvPxxWTtNjF3Hl+R+GBVMK0jmWT3m2g4vzjsVl2cSfLCJyA7j82i72/Wks8YShcaC0HeO9lLYjXxeHtpWpkyTmejEKYo+tHSQYgMmW5aZtrIRBdw6XVJwIzSW6DGbyjB6GfWZObl9C3wWSov3h5eaVjDDs10KoTg6kVJ3dN21Uv2ieKx6U1Z46lLYzU9uqRSSRdBzKQngjmLwIdXykDOehEpYvDfco6PLkM+zPJvvyXoo2N018sP58jt9txOD14/JqOSIjhWi16baOR2PZqI49vVHa1t8zM7StWkUKSBeXsrDzImTHsWW5uaXsPTb/1f5QdD0AjNDqKmbk8Uo8n3Tie/0cThyqxNKZxUidlzp7F2UWF3taF7OpuGXSfdyhe0Rb/0RQHfvcorSdOdpW3jIpIp1cykLn6ayMcN9cd2g4GxzS3li5j833vkVBrpuVhR2sX9fESJ2XZY+NUmZxUZfby+fO3x42TI0124xyb8xMlLaTV+9Uojr3FJKOVuV0w8jJEfaCmdhvOWc3VoMH56csWI+aaL41DyAsvVhc90uC+NPx+z1bSMfvXmk7HNW5p5j5Ds4U8dyAKKdkVJ/md6vBwwUvnWbx9SfIrXGSZxibsfxZI+OlifgViaG0nVhdpy0jSd+p6tzniHRrBEGmE2skjwB7jpNRt+ZFoI+OF0yUkKo6TilDdexphdJ2/HWcUkYSv0vVuc8h6dQIppujnA6X38y24/Wsqz3JkcFFbHnuUt53LKZtTMt0MzkqXyJ1m7EM1bGnJUrb6adt1VLmmLlwKYvWy2Am9B4GB5xV9LitXL60GbvZQV1uL103dLPzzGJa84u5uKQVq8FDg6U9zMrRN7J0FL8iuShtx08qtJ0WrcVwFg4gUu1SFmsj0LuQ6S2VIV8up52FgLYVO5hDsso8QNeoDXuOky5PPtbcnmmHsOkq/rlAaTsF5SttR0VahB8QQjiBo/NdjyRRCvTOdyWSxEJ5lsVSyrL5uLHSdtqyUJ5lWm2nizl0VEq5br4rkQyEEHvUsyh0KG2nIQvpWabj7BszKhQKxVmA6twVCoViAZIunfuj812BJKKeRaFnIX2H6lkyiLRYUFUoFApFckkXy12hUCgUSWTeO3chxDVCiKNCiGNCiHvnuz6zIYR4XAjRLYQ4qDtWLIT4gxCiOfCzKHBcCCF+FHi2A0KIC+ev5uEIIWqEEG8JIQ4LIQ4JIe4OHM+4Z0lXMknbC0XXoLQdQko5by/AABwH6oBs4E9Aw3zWKYo6/xlwIXBQd+x7wL2B9/cC/xl4fx3wKiCADcDO+a6/rs4VwIWB9zagCWjIxGdJx1emaXuh6DpQP6VtKefdcl8PHJNStkgpx4BfADfMc51mREr5R6B/0uEbgCcD758EPqE7/pTU2AEUCiEq5qamMyOl7JBSvh947wQ+BKrIwGdJUzJK2wtF16C0HWS+O/cq4LTu97bAsUzDLqXsCLzvBIIZkTPi+YQQtUAjsJMMf5Y0YiF8XxmvhbNZ2/PduS84pDbOyxgXJCGEFfgV8CUppUP/WaY9iyJ1ZKIWznZtz3fn3g7U6H6vDhzLNLqCw7jAz+7A8bR+PiGECU38T0spXwgczshnSUMWwveVsVpQ2p7/zn03UC+EWCKEyAY+Dbw4z3WKhxeB2wLvbwO26I5/NrAavwEY0g0L5xUhhAB+CnwopfyB7qOMe5Y0ZSFoOyO1oLQdYL5XdNFWqpvQPAu+Pt/1iaK+zwIdgBdtbu5vgRLgDaAZeB0oDpwrgB8Hnu0DYN1811/3HJeiDUsPAPsDr+sy8VnS9ZVJ2l4oug7UT2lbSrVDVaFQKBYi8z0to1AoFIoUoDp3hUKhWICozl2hUCgWIKpzVygUigWI6twVCoViAaI6d4VCoViAqM5doVAoFiCqc1coFIoFyP8BUfipkYTQz8AAAAAASUVORK5CYII=
 "
 >
 </div>
@@ -528,61 +426,9 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>628 ms ± 3.83 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<pre>639 ms ± 1.34 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+371 ms ± 387 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-6-a72aaf6fe1bc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;[[mandel(complex(x,y)) for x in xs] for y in ys] # pure python&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;[[mandel_cython(complex(x,y)) for x in xs] for y in ys] # cython&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;mandel_cython&#39; is not defined</pre>
 </div>
 </div>
 
@@ -635,24 +481,6 @@
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -681,24 +509,6 @@
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -734,7 +544,7 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>13.1 µs ± 47.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<pre>13.3 µs ± 167 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre>
 </div>
 </div>
@@ -765,47 +575,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-03d48e75f989&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># primitive cython</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;a = mandel_cython(complex(0, 0)) &#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;mandel_cython&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7.57 µs ± 78.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre>
 </div>
 </div>
 
@@ -835,47 +607,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-01405f40d218&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># cython with C type variable</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;a = var_typed_mandel_cython(complex(0, 0)) &#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;var_typed_mandel_cython&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.75 µs ± 21.2 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre>
 </div>
 </div>
 
@@ -905,47 +639,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-001b3da907f7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># cython with typed variable + function</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;a = call_typed_mandel_cython(complex(0, 0))&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;call_typed_mandel_cython&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>796 ns ± 2.15 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+</pre>
 </div>
 </div>
 
@@ -1015,24 +711,6 @@
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -1064,7 +742,7 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>622 ms ± 3.17 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<pre>633 ms ± 6.23 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre>
 </div>
 </div>
@@ -1094,50 +772,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-4788bd5aaf09&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;data_cy = [[call_typed_mandel_cython(complex(x,y)) for x in xs] for y in ys] # typed cython&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;call_typed_mandel_cython&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>59.3 ms ± 637 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre>
 </div>
 </div>
 
@@ -1166,46 +803,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-17-7ed1a9156416&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;numpy_cython_1(values) # ndarray&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;numpy_cython_1&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>36 ms ± 1.25 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre>
 </div>
 </div>
 
@@ -1233,29 +833,6 @@
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-18-e65390499867&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>numpy_cython_2 <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>vectorize<span class="ansi-blue-fg">(</span>call_typed_mandel_cython<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;call_typed_mandel_cython&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1278,46 +855,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-19-bbbacb459734&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;numpy_cython_2(values) #  vectorize&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;numpy_cython_2&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>41 ms ± 94.9 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</pre>
 </div>
 </div>
 
@@ -1351,24 +891,6 @@
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1385,24 +907,6 @@
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%cython` not found.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1428,48 +932,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-22-cbb3d3515fb1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;[math.sin(i) for i in range(int(1e7))] # python&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;math&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.2 s ± 57 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre>
 </div>
 </div>
 
@@ -1498,46 +963,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-23-412c90c89148&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;py_sin()                                # cython call python library&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;py_sin&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.14 s ± 14.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre>
 </div>
 </div>
 
@@ -1566,46 +994,9 @@
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-24-695e96a6fc22&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;timeit&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;c_sin()                                 # cython call C library&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2312</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
-<span class="ansi-green-intense-fg ansi-bold">   2313</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2314</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2315</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2316</span> 
-
-<span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/decorator.py:decorator-gen-60&gt;</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, line, cell, local_ns)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1156</span>             <span class="ansi-green-fg">for</span> index <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1157</span>                 number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span> <span class="ansi-blue-fg">**</span> index
-<span class="ansi-green-fg">-&gt; 1158</span><span class="ansi-red-fg">                 </span>time_number <span class="ansi-blue-fg">=</span> timer<span class="ansi-blue-fg">.</span>timeit<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1159</span>                 <span class="ansi-green-fg">if</span> time_number <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1160</span>                     <span class="ansi-green-fg">break</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/IPython/core/magics/execution.py</span> in <span class="ansi-cyan-fg">timeit</span><span class="ansi-blue-fg">(self, number)</span>
-<span class="ansi-green-intense-fg ansi-bold">    167</span>         gc<span class="ansi-blue-fg">.</span>disable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 169</span><span class="ansi-red-fg">             </span>timing <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>inner<span class="ansi-blue-fg">(</span>it<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>timer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    170</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>             <span class="ansi-green-fg">if</span> gcold<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;magic-timeit&gt;</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-fg">(_it, _timer)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;c_sin&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5.8 ms ± 9.04 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+</pre>
 </div>
 </div>
 
@@ -1664,7 +1055,7 @@
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-11-21 10:20:52 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

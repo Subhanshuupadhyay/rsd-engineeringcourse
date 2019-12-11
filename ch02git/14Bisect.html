@@ -454,7 +454,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[3723736741bd5f2adc4bdd03515231ae024787a9] Comment 499
+[5f67ef8ebf8ce160c3650d6c9f1b55f6492a6a5a] Comment 499
 </pre>
 </div>
 </div>
@@ -590,39 +590,42 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[3723736741bd5f2adc4bdd03515231ae024787a9] Comment 499
+[5f67ef8ebf8ce160c3650d6c9f1b55f6492a6a5a] Comment 499
 running python squares.py 2
 Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[aca81fee4f5e8df6d674419d16ed3a18d4661705] Comment 249
+[5224d842719dafa1b941416bc2903a0b2d0b5bed] Comment 250
 running python squares.py 2
+4
 Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[8dc68870e7a91238d00dadb0f387b6035040fbe0] Comment 124
+[36f1cb3a753652932682faca95a8919fbc74c5da] Comment 374
 running python squares.py 2
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[3715945f4b3d9349647a23b0697b26e80855e665] Comment 61
+[fc78d7c0082dd779afcc03d1a572db4dff5d6320] Comment 311
 running python squares.py 2
 Bisecting: 30 revisions left to test after this (roughly 5 steps)
-[8e4a242e8356742b40c94744c3e7765f29e8adf5] Comment 31
+[1b96b60613d07df07f36b0fe1952a629b47f607a] Comment 281
 running python squares.py 2
 4
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[cba9a1e8f74648a10277fb53dfb97b9e1fd1d664] Comment 45
+[287a5b5d1ac71f2fd0d7fdbc7e72ccfa3c448ddc] Comment 296
 running python squares.py 2
+4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[6bb5401e943b347e5299dba6ee8267e0a9a66cc8] Comment 38
+[1071cf0d2a0fa7f9040c654c7d6b0ae70584716a] Comment 304
 running python squares.py 2
 4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[01a71c0255c8121589061fb8b57fab8dd3d4e9a8] Comment 41
+[429dc547530856f6eccbad8e99a8f14f32b8f3dd] Comment 307
 running python squares.py 2
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[5f67fe5ef06b22675f7a9c58f3a72eb67984df7c] Comment 39
+[967bc181613d3db8c4ebb271b58238b1b07fd4ff] Breaking argument type
 running python squares.py 2
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[17866736d17155c1e18680b9f563f8ce851d2492] Breaking argument type
+[437a166ab3c6b6af4b0d68673fc8ca8e12327538] Comment 305
 running python squares.py 2
-17866736d17155c1e18680b9f563f8ce851d2492 is the first bad commit
-commit 17866736d17155c1e18680b9f563f8ce851d2492
+4
+967bc181613d3db8c4ebb271b58238b1b07fd4ff is the first bad commit
+commit 967bc181613d3db8c4ebb271b58238b1b07fd4ff
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -641,20 +644,8 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was 3723736 Comment 499
+<pre>Previous HEAD position was 5f67ef8 Comment 499
 Switched to branch &#39;buggy&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
@@ -742,7 +733,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-11-21 10:20:52 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
