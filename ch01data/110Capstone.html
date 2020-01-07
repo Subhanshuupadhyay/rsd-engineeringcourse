@@ -461,32 +461,32 @@ mkdir -p greengraph  <span class="c1"># Create the folder for the module (on mac
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/geopy/geocoders/base.py</span> in <span class="ansi-cyan-fg">_call_geocoder</span><span class="ansi-blue-fg">(self, url, timeout, raw, requester, deserializer, **kwargs)</span>
+<span class="ansi-green-fg">~/virtualenv/python3.7.5/lib/python3.7/site-packages/geopy/geocoders/base.py</span> in <span class="ansi-cyan-fg">_call_geocoder</span><span class="ansi-blue-fg">(self, url, timeout, raw, requester, deserializer, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    354</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 355</span><span class="ansi-red-fg">             </span>page <span class="ansi-blue-fg">=</span> requester<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">=</span>timeout<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    356</span>         <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> error<span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/python/3.7.1/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
+<span class="ansi-green-fg">/opt/python/3.7.5/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
 <span class="ansi-green-intense-fg ansi-bold">    530</span>             meth <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>processor<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">--&gt; 531</span><span class="ansi-red-fg">             </span>response <span class="ansi-blue-fg">=</span> meth<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    532</span> 
 
-<span class="ansi-green-fg">/opt/python/3.7.1/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
+<span class="ansi-green-fg">/opt/python/3.7.5/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
 <span class="ansi-green-intense-fg ansi-bold">    640</span>             response = self.parent.error(
 <span class="ansi-green-fg">--&gt; 641</span><span class="ansi-red-fg">                 &#39;http&#39;, request, response, code, msg, hdrs)
 </span><span class="ansi-green-intense-fg ansi-bold">    642</span> 
 
-<span class="ansi-green-fg">/opt/python/3.7.1/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
+<span class="ansi-green-fg">/opt/python/3.7.5/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
 <span class="ansi-green-intense-fg ansi-bold">    568</span>             args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>dict<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;default&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;http_error_default&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> orig_args
 <span class="ansi-green-fg">--&gt; 569</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_call_chain<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    570</span> 
 
-<span class="ansi-green-fg">/opt/python/3.7.1/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
+<span class="ansi-green-fg">/opt/python/3.7.5/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
 <span class="ansi-green-intense-fg ansi-bold">    502</span>             func <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>handler<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">--&gt; 503</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    504</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/python/3.7.1/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">http_error_default</span><span class="ansi-blue-fg">(self, req, fp, code, msg, hdrs)</span>
+<span class="ansi-green-fg">/opt/python/3.7.5/lib/python3.7/urllib/request.py</span> in <span class="ansi-cyan-fg">http_error_default</span><span class="ansi-blue-fg">(self, req, fp, code, msg, hdrs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    648</span>     <span class="ansi-green-fg">def</span> http_error_default<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> req<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 649</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">.</span>full_url<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    650</span> 
@@ -515,14 +515,14 @@ During handling of the above exception, another exception occurred:
 <span class="ansi-green-intense-fg ansi-bold">     14</span> 
 <span class="ansi-green-intense-fg ansi-bold">     15</span>     <span class="ansi-green-fg">def</span> location_sequence<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> start<span class="ansi-blue-fg">,</span> end<span class="ansi-blue-fg">,</span> steps<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/geopy/geocoders/yandex.py</span> in <span class="ansi-cyan-fg">geocode</span><span class="ansi-blue-fg">(self, query, exactly_one, timeout)</span>
+<span class="ansi-green-fg">~/virtualenv/python3.7.5/lib/python3.7/site-packages/geopy/geocoders/yandex.py</span> in <span class="ansi-cyan-fg">geocode</span><span class="ansi-blue-fg">(self, query, exactly_one, timeout)</span>
 <span class="ansi-green-intense-fg ansi-bold">    114</span>         logger<span class="ansi-blue-fg">.</span>debug<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;%s.geocode: %s&#34;</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>__class__<span class="ansi-blue-fg">.</span>__name__<span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    115</span>         return self._parse_json(
 <span class="ansi-green-fg">--&gt; 116</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_call_geocoder<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">=</span>timeout<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
 <span class="ansi-green-intense-fg ansi-bold">    117</span>             exactly_one<span class="ansi-blue-fg">,</span>
 <span class="ansi-green-intense-fg ansi-bold">    118</span>         )
 
-<span class="ansi-green-fg">~/virtualenv/python3.7.1/lib/python3.7/site-packages/geopy/geocoders/base.py</span> in <span class="ansi-cyan-fg">_call_geocoder</span><span class="ansi-blue-fg">(self, url, timeout, raw, requester, deserializer, **kwargs)</span>
+<span class="ansi-green-fg">~/virtualenv/python3.7.5/lib/python3.7/site-packages/geopy/geocoders/base.py</span> in <span class="ansi-cyan-fg">_call_geocoder</span><span class="ansi-blue-fg">(self, url, timeout, raw, requester, deserializer, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    371</span>                                 exc_info=False)
 <span class="ansi-green-intense-fg ansi-bold">    372</span>                 <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 373</span><span class="ansi-red-fg">                     </span><span class="ansi-green-fg">raise</span> ERROR_CODE_MAP<span class="ansi-blue-fg">[</span>code<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">)</span>
@@ -624,7 +624,7 @@ During handling of the above exception, another exception occurred:
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-01-07 19:12:50 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

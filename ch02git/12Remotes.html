@@ -308,7 +308,7 @@ git remote -v
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Your branch is ahead of &#39;origin/master&#39; by 6 commits.
+<pre>Your branch is ahead of &#39;origin/master&#39; by 1 commit.
   (use &#34;git push&#34; to publish your local commits)
 origin	git@github.com:UCL/github-example.git (fetch)
 origin	git@github.com:UCL/github-example.git (push)
@@ -401,7 +401,7 @@ git commit -am <span class="s2">&quot;Add Whernside&quot;</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 0128cb0] Add Whernside
+<pre>[master f214a57] Add Whernside
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -448,7 +448,7 @@ git push -uf rits master
 <pre>remote: This repository moved. Please use the new location:        
 remote:   git@github.com:UCL-RITS/github-example.git        
 To github.com:ucl-rits/github-example.git
- + 36437b1...0128cb0 master -&gt; master (forced update)
+ + 0d0c312...f214a57 master -&gt; master (forced update)
 </pre>
 </div>
 </div>
@@ -489,13 +489,8 @@ git log --oneline --left-right rits/master...origin/master
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt; 0128cb0 Add Whernside
-&lt; 6147de6 Add github pages YAML frontmatter
-&lt; 9af6cbd Add a makefile and ignore generated files
-&lt; 8f603c4 Add Pennines
-&lt; 46b3388 Merge branch &#39;experiment&#39;
-&lt; 6b124a7 Commit Aonach onto master branch
-&lt; b7e1977 Add Cadair Idris
+<pre>&lt; f214a57 Add Whernside
+&lt; 59d92ab Add github pages YAML frontmatter
 </pre>
 </div>
 </div>
@@ -548,11 +543,7 @@ git diff --name-only origin/master
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>.gitignore
-Makefile
-Pennines.md
-Scotland.md
-Wales.md
+<pre>Pennines.md
 index.md
 </pre>
 </div>
@@ -593,8 +584,8 @@ git branch -vv
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>  gh-pages 6147de6 [origin/gh-pages] Add github pages YAML frontmatter
-* master   0128cb0 [rits/master] Add Whernside
+<pre>  gh-pages 59d92ab [origin/gh-pages] Add github pages YAML frontmatter
+* master   f214a57 [rits/master] Add Whernside
 </pre>
 </div>
 </div>
@@ -858,7 +849,7 @@ website</a>.</p>
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-01-07 19:12:50 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

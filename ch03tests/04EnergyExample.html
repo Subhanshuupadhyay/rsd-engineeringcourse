@@ -460,14 +460,14 @@ pytest
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>============================= test session starts ==============================
-platform linux -- Python 3.7.1, pytest-5.1.1, py-1.8.0, pluggy-0.12.0
+platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.0, pluggy-0.13.0
 rootdir: /home/travis/build/UCL/rsd-engineeringcourse/ch03tests/diffusion
 plugins: cov-2.8.1
 collected 1 item
 
 test_model.py .                                                          [100%]
 
-============================== 1 passed in 0.02s ===============================
+============================== 1 passed in 0.01s ===============================
 </pre>
 </div>
 </div>
@@ -666,14 +666,14 @@ pytest
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>============================= test session starts ==============================
-platform linux -- Python 3.7.1, pytest-5.1.1, py-1.8.0, pluggy-0.12.0
+platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.0, pluggy-0.13.0
 rootdir: /home/travis/build/UCL/rsd-engineeringcourse/ch03tests/diffusion
 plugins: cov-2.8.1
 collected 6 items
 
 test_model.py ......                                                     [100%]
 
-============================== 6 passed in 0.14s ===============================
+============================== 6 passed in 0.15s ===============================
 </pre>
 </div>
 </div>
@@ -715,171 +715,173 @@ pytest --cov
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>============================= test session starts ==============================
-platform linux -- Python 3.7.1, pytest-5.1.1, py-1.8.0, pluggy-0.12.0
+platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.0, pluggy-0.13.0
 rootdir: /home/travis/build/UCL/rsd-engineeringcourse/ch03tests/diffusion
 plugins: cov-2.8.1
 collected 6 items
 
 test_model.py ......                                                     [100%]
 
------------ coverage: platform linux, python 3.7.1-final-0 -----------
+----------- coverage: platform linux, python 3.7.5-final-0 -----------
 Name                                                                                                   Stmts   Miss  Cover
 --------------------------------------------------------------------------------------------------------------------------
 __init__.py                                                                                                0      0   100%
 model.py                                                                                                  10      0   100%
 test_model.py                                                                                             31      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/_argcomplete.py                   34     33     3%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/_code/code.py                    608    592     3%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/_code/source.py                  210    203     3%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/assertion/__init__.py             68     59    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/assertion/rewrite.py             572    495    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/cacheprovider.py                 228    190    17%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/capture.py                       458    385    16%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/compat.py                        138    103    25%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/config/__init__.py               629    529    16%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/config/argparsing.py             229    186    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/debugging.py                     191    183     4%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/doctest.py                       303    300     1%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/faulthandler.py                   43     33    23%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/fixtures.py                      722    580    20%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/helpconfig.py                    121    112     7%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/junitxml.py                      338    336     1%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/logging.py                       314    209    33%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/main.py                          409    237    42%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/mark/__init__.py                  80     66    18%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/mark/evaluate.py                  90     78    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/mark/structures.py               172    155    10%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/monkeypatch.py                   146    134     8%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/nodes.py                         202    141    30%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/nose.py                           20      9    55%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/pastebin.py                       57     56     2%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/pathlib.py                       193    179     7%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/python.py                        785    566    28%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/python_api.py                    227    207     9%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/reports.py                       203    174    14%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/resultlog.py                      67     65     3%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/runner.py                        251    144    43%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/setuponly.py                      47     46     2%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/setupplan.py                      12     11     8%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/skipping.py                       96     67    30%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/stepwise.py                       58     46    21%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/terminal.py                      709    547    23%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/tmpdir.py                         75     68     9%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/unittest.py                      190    181     5%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/_pytest/warnings.py                       66     48    27%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/attr/converters.py                        27     25     7%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/importlib_metadata/__init__.py           177    172     3%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/importlib_metadata/_compat.py             21     20     5%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/more_itertools/more.py                   601    588     2%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/__config__.py                       28     14    50%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/__init__.py                         64      9    86%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/_distributor_init.py                 0      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/_globals.py                         20      2    90%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/_pytesttester.py                    48     39    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/compat/__init__.py                   8      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/compat/_inspect.py                  68     17    75%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/compat/py3k.py                     117     81    31%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/__init__.py                    95     25    74%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_add_newdocs.py               300      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_dtype.py                     154    131    15%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py               53     34    36%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_internal.py                  439    332    24%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_methods.py                    90     66    27%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_string_helpers.py             15      1    93%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/_type_aliases.py              152     19    88%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/arrayprint.py                 550    427    22%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/defchararray.py               422    250    41%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/einsumfunc.py                 408    386     5%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/fromnumeric.py                352    208    41%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/function_base.py              107     78    27%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/getlimits.py                  198     82    59%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/info.py                         3      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/machar.py                     189    178     6%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/memmap.py                      91     73    20%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/multiarray.py                  98     30    69%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/numeric.py                    588    392    33%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/numerictypes.py               161     91    43%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/overrides.py                   49     20    59%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/records.py                    367    322    12%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/shape_base.py                 185    148    20%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/core/umath.py                        4      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/ctypeslib.py                       213    175    18%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/fft/__init__.py                      7      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/fft/fftpack.py                     154    109    29%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/fft/helper.py                       86     58    33%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/fft/info.py                          2      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/__init__.py                     44      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/_datasource.py                 221    177    20%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/_iotools.py                    388    335    14%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/_version.py                     77     61    21%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/arraypad.py                    346    315     9%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/arraysetops.py                 185    154    17%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/arrayterator.py                 73     60    18%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/financial.py                   140    102    27%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/format.py                      257    228    11%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/function_base.py              1188   1047    12%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/histograms.py                  277    244    12%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/index_tricks.py                256    183    29%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/info.py                          3      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/mixins.py                       63     13    79%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/nanfunctions.py                272    212    22%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/npyio.py                       875    809     8%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/polynomial.py                  426    346    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/scimath.py                      62     38    39%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/shape_base.py                  247    200    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/stride_tricks.py                68     53    22%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/twodim_base.py                 152    106    30%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/type_check.py                  125     85    32%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/ufunclike.py                    54     30    44%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/lib/utils.py                       514    431    16%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/linalg/__init__.py                   6      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/linalg/info.py                       2      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/linalg/linalg.py                   664    562    15%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/ma/__init__.py                      11      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/ma/core.py                        2416   1785    26%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/ma/extras.py                       557    465    17%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/matrixlib/__init__.py                6      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py             234    178    24%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/__init__.py              10      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/_polybase.py            352    267    24%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/chebyshev.py            484    418    14%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/hermite.py              422    366    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/hermite_e.py            419    363    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/laguerre.py             408    353    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/legendre.py             416    361    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/polynomial.py           353    300    15%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/polynomial/polyutils.py             65     48    26%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/random/__init__.py                  13      1    92%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/testing/__init__.py                  9      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/testing/_private/__init__.py         0      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/testing/_private/decorators.py      72     58    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/testing/_private/nosetester.py     184    165    10%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/testing/_private/utils.py          804    711    12%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/numpy/version.py                           7      1    86%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pluggy/_tracing.py                        59     49    17%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pluggy/callers.py                        122     86    30%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pluggy/hooks.py                          177    103    42%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pluggy/manager.py                        182    140    23%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_builtin.py                           112     78    30%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_code/__init__.py                       0      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_code/code.py                         524    408    22%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_error.py                              52     49     6%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_io/__init__.py                         0      0   100%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_io/capture.py                        266    215    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_io/terminalwriter.py                 266    159    40%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_path/common.py                       274    187    32%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_path/local.py                        690    546    21%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_vendored_packages/apipkg.py          148    129    13%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/py/_xmlgen.py                            170    168     1%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pytest_cov/compat.py                      27     22    19%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pytest_cov/embed.py                       77     71     8%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pytest_cov/engine.py                     202    189     6%
-/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/pytest_cov/plugin.py                     194    177     9%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/_argcomplete.py                   34     33     3%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/_code/code.py                    632    616     3%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/_code/source.py                  225    218     3%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/assertion/__init__.py             71     62    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/assertion/rewrite.py             590    512    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/cacheprovider.py                 243    202    17%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/capture.py                       458    385    16%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/compat.py                        168    130    23%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/config/__init__.py               652    552    15%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/config/argparsing.py             238    192    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/debugging.py                     191    182     5%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/doctest.py                       323    320     1%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/faulthandler.py                   43     33    23%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/fixtures.py                      769    625    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/helpconfig.py                    120    111     8%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/junitxml.py                      346    344     1%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/logging.py                       348    236    32%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/main.py                          417    246    41%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/mark/__init__.py                  80     66    18%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/mark/evaluate.py                  91     79    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/mark/structures.py               170    153    10%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/monkeypatch.py                   146    134     8%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/nodes.py                         223    160    28%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/nose.py                           20      9    55%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/pastebin.py                       60     59     2%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/pathlib.py                       203    189     7%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/python.py                        786    573    27%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/python_api.py                    227    207     9%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/reports.py                       231    202    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/resultlog.py                      67     65     3%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/runner.py                        262    152    42%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/setuponly.py                      42     41     2%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/setupplan.py                      13     12     8%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/skipping.py                       96     67    30%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/stepwise.py                       58     46    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/terminal.py                      769    591    23%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/tmpdir.py                         81     74     9%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/unittest.py                      190    181     5%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/_pytest/warnings.py                       68     49    28%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/attr/converters.py                        27     25     7%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/importlib_metadata/__init__.py           194    189     3%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/importlib_metadata/_compat.py             24     23     4%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/more_itertools/more.py                   667    654     2%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/__config__.py                       28     14    50%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/__init__.py                         64      9    86%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/_distributor_init.py                 0      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/_globals.py                         20      2    90%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/_pytesttester.py                    48     39    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/compat/__init__.py                   8      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/compat/_inspect.py                  68     17    75%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/compat/py3k.py                     121     81    33%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/__init__.py                    83     14    83%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_add_newdocs.py               298      2    99%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_asarray.py                    41     27    34%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_dtype.py                     154    125    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py               53     34    36%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_exceptions.py                 71     32    55%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_internal.py                  430    327    24%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_methods.py                   138    105    24%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_string_helpers.py             15      1    93%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_type_aliases.py              152     19    88%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/_ufunc_config.py               86     25    71%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/arrayprint.py                 550    427    22%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/defchararray.py               422    250    41%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/einsumfunc.py                 408    386     5%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/fromnumeric.py                356    201    44%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/function_base.py              109     78    28%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/getlimits.py                  196     82    58%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/info.py                         3      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/machar.py                     189    178     6%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/memmap.py                      91     73    20%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/multiarray.py                 102     28    73%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/numeric.py                    479    344    28%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/numerictypes.py               161     83    48%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/overrides.py                   52      9    83%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/records.py                    361    312    14%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/shape_base.py                 192    154    20%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/core/umath.py                        4      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/ctypeslib.py                       214    176    18%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/fft/__init__.py                      7      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/fft/helper.py                       48     33    31%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/fft/info.py                          2      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/fft/pocketfft.py                   155    113    27%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/__init__.py                     44      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/_datasource.py                 219    174    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/_iotools.py                    387    334    14%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/_version.py                     77     61    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/arraypad.py                    218    199     9%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/arraysetops.py                 185    154    17%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/arrayterator.py                 73     60    18%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/financial.py                   140    102    27%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/format.py                      262    231    12%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/function_base.py              1183   1043    12%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/histograms.py                  283    249    12%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/index_tricks.py                257    184    28%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/info.py                          3      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/mixins.py                       63     13    79%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/nanfunctions.py                278    217    22%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/npyio.py                       874    808     8%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/polynomial.py                  426    346    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/scimath.py                      62     38    39%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/shape_base.py                  252    205    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/stride_tricks.py                65     50    23%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/twodim_base.py                 161    115    29%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/type_check.py                  132     92    30%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/ufunclike.py                    56     28    50%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/lib/utils.py                       531    431    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/linalg/__init__.py                   6      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/linalg/info.py                       2      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/linalg/linalg.py                   674    572    15%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/ma/__init__.py                      11      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/ma/core.py                        2416   1789    26%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/ma/extras.py                       556    464    17%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/matrixlib/__init__.py                6      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py             234    178    24%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/__init__.py              10      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/_polybase.py            368    267    27%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/chebyshev.py            361    295    18%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/hermite.py              270    214    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/hermite_e.py            267    211    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/laguerre.py             256    201    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/legendre.py             264    209    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/polynomial.py           217    164    24%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/polynomial/polyutils.py            232    202    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/random/__init__.py                  20      1    95%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/random/_pickle.py                   22     12    45%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/testing/__init__.py                  9      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/testing/_private/__init__.py         0      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/testing/_private/decorators.py      72     58    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/testing/_private/nosetester.py     184    165    10%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/testing/_private/utils.py          811    716    12%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/numpy/version.py                           7      1    86%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pluggy/_tracing.py                        41     31    24%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pluggy/callers.py                        122     86    30%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pluggy/hooks.py                          175    101    42%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pluggy/manager.py                        195    153    22%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_builtin.py                           112    105     6%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_code/__init__.py                       0      0   100%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_code/code.py                         524    408    22%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_error.py                              52     49     6%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_io/terminalwriter.py                 266    197    26%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_path/common.py                       274    187    32%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_path/local.py                        690    546    21%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_vendored_packages/apipkg.py          148    129    13%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/py/_xmlgen.py                            170    168     1%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pytest_cov/compat.py                      27     22    19%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pytest_cov/embed.py                       77     71     8%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pytest_cov/engine.py                     202    189     6%
+/home/travis/virtualenv/python3.7.5/lib/python3.7/site-packages/pytest_cov/plugin.py                     194    177     9%
 --------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                  33882  26762    21%
+TOTAL                                                                                                  33458  26271    21%
 
 
-============================== 6 passed in 3.61s ===============================
+============================== 6 passed in 2.83s ===============================
 </pre>
 </div>
 </div>
@@ -921,18 +923,18 @@ pytest --cov --cov-report html
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>============================= test session starts ==============================
-platform linux -- Python 3.7.1, pytest-5.1.1, py-1.8.0, pluggy-0.12.0
+platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.0, pluggy-0.13.0
 rootdir: /home/travis/build/UCL/rsd-engineeringcourse/ch03tests/diffusion
 plugins: cov-2.8.1
 collected 6 items
 
 test_model.py ......                                                     [100%]
 
------------ coverage: platform linux, python 3.7.1-final-0 -----------
+----------- coverage: platform linux, python 3.7.5-final-0 -----------
 Coverage HTML written to dir htmlcov
 
 
-============================== 6 passed in 6.19s ===============================
+============================== 6 passed in 6.36s ===============================
 </pre>
 </div>
 </div>
@@ -1013,7 +1015,7 @@ Coverage HTML written to dir htmlcov
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-01-07 19:12:50 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

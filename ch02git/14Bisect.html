@@ -454,7 +454,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[5f67ef8ebf8ce160c3650d6c9f1b55f6492a6a5a] Comment 499
+[4df6d65f2c030ac84a031b44499709466de8d143] Comment 499
 </pre>
 </div>
 </div>
@@ -590,42 +590,42 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[5f67ef8ebf8ce160c3650d6c9f1b55f6492a6a5a] Comment 499
+[4df6d65f2c030ac84a031b44499709466de8d143] Comment 499
 running python squares.py 2
 Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[5224d842719dafa1b941416bc2903a0b2d0b5bed] Comment 250
+[8a2808f57b55ced3b413e576b6ff33c859f485e5] Comment 249
+running python squares.py 2
+Bisecting: 124 revisions left to test after this (roughly 7 steps)
+[31597e3be0f6d0bb18af02f6bdf5ea165cba537e] Comment 125
 running python squares.py 2
 4
-Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[36f1cb3a753652932682faca95a8919fbc74c5da] Comment 374
-running python squares.py 2
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[fc78d7c0082dd779afcc03d1a572db4dff5d6320] Comment 311
+[48fdb3f36862cd762c2c62362314e7343ea113d9] Comment 186
 running python squares.py 2
 Bisecting: 30 revisions left to test after this (roughly 5 steps)
-[1b96b60613d07df07f36b0fe1952a629b47f607a] Comment 281
+[727ba311f127607fd6f7cc4a73b0ff5c051a1505] Comment 155
 running python squares.py 2
-4
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[287a5b5d1ac71f2fd0d7fdbc7e72ccfa3c448ddc] Comment 296
+[cf4985a1e4fe6d9c93cf0c8eb858c7184f70a389] Comment 140
 running python squares.py 2
 4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[1071cf0d2a0fa7f9040c654c7d6b0ae70584716a] Comment 304
+[a031216acd7afd25ec2515d8c750f6a367499aae] Comment 148
 running python squares.py 2
 4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[429dc547530856f6eccbad8e99a8f14f32b8f3dd] Comment 307
-running python squares.py 2
-Bisecting: 1 revision left to test after this (roughly 1 step)
-[967bc181613d3db8c4ebb271b58238b1b07fd4ff] Breaking argument type
-running python squares.py 2
-Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[437a166ab3c6b6af4b0d68673fc8ca8e12327538] Comment 305
+[85d6dfab4ca9ac5cf4a7ba184be94881eb6b51ae] Comment 152
 running python squares.py 2
 4
-967bc181613d3db8c4ebb271b58238b1b07fd4ff is the first bad commit
-commit 967bc181613d3db8c4ebb271b58238b1b07fd4ff
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[c62392b6ca91c11eda0f862c2d043c24e26835e8] Breaking argument type
+running python squares.py 2
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[8c8fb15628ad84aa77b60edf9fb7c4d6d8e85b50] Comment 153
+running python squares.py 2
+4
+c62392b6ca91c11eda0f862c2d043c24e26835e8 is the first bad commit
+commit c62392b6ca91c11eda0f862c2d043c24e26835e8
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -644,7 +644,7 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was 5f67ef8 Comment 499
+<pre>Previous HEAD position was 4df6d65 Comment 499
 Switched to branch &#39;buggy&#39;
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
@@ -733,7 +733,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2019-12-11 15:02:05 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-01-07 19:12:50 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
