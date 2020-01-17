@@ -454,7 +454,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[4df6d65f2c030ac84a031b44499709466de8d143] Comment 499
+[506a15c8e30778254808357b84bbd7ba9aa63346] Comment 500
 </pre>
 </div>
 </div>
@@ -590,42 +590,43 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[4df6d65f2c030ac84a031b44499709466de8d143] Comment 499
-running python squares.py 2
-Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[8a2808f57b55ced3b413e576b6ff33c859f485e5] Comment 249
-running python squares.py 2
-Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[31597e3be0f6d0bb18af02f6bdf5ea165cba537e] Comment 125
+[506a15c8e30778254808357b84bbd7ba9aa63346] Comment 500
 running python squares.py 2
 4
+Bisecting: 250 revisions left to test after this (roughly 8 steps)
+[09854dcad82b8ec61647fadf034cab39c844cdae] Comment 749
+running python squares.py 2
+Bisecting: 124 revisions left to test after this (roughly 7 steps)
+[5caba758a742eed77ebb77ef06c5801891718fb2] Comment 624
+running python squares.py 2
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[48fdb3f36862cd762c2c62362314e7343ea113d9] Comment 186
+[d624fbee4f4ac036b1ec5b56df48707843d8524d] Comment 561
 running python squares.py 2
 Bisecting: 30 revisions left to test after this (roughly 5 steps)
-[727ba311f127607fd6f7cc4a73b0ff5c051a1505] Comment 155
+[d96c67fe3c86fff4096b80cab5c823c752f25c53] Comment 531
 running python squares.py 2
+4
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[cf4985a1e4fe6d9c93cf0c8eb858c7184f70a389] Comment 140
+[c46edadf25043cdc340e5027d718f1ed10491153] Comment 546
 running python squares.py 2
 4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[a031216acd7afd25ec2515d8c750f6a367499aae] Comment 148
+[904cd2be98edbcde00ab0dbea3bf40e048b91c18] Comment 554
 running python squares.py 2
 4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[85d6dfab4ca9ac5cf4a7ba184be94881eb6b51ae] Comment 152
+[9dffd0ade41d66d36884aca53aa3890860e0359a] Breaking argument type
 running python squares.py 2
-4
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[c62392b6ca91c11eda0f862c2d043c24e26835e8] Breaking argument type
-running python squares.py 2
-Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[8c8fb15628ad84aa77b60edf9fb7c4d6d8e85b50] Comment 153
+[2db7d4a5a1f8320ff576dc9594dc127d2a61c2e9] Comment 556
 running python squares.py 2
 4
-c62392b6ca91c11eda0f862c2d043c24e26835e8 is the first bad commit
-commit c62392b6ca91c11eda0f862c2d043c24e26835e8
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[250785c190bf080461dbecef6c88347a7d914a68] Comment 557
+running python squares.py 2
+4
+9dffd0ade41d66d36884aca53aa3890860e0359a is the first bad commit
+commit 9dffd0ade41d66d36884aca53aa3890860e0359a
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -644,12 +645,8 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was 4df6d65 Comment 499
+<pre>Previous HEAD position was 506a15c Comment 500
 Switched to branch &#39;buggy&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
@@ -733,7 +730,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-01-07 19:12:50 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-01-17 19:06:04 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
