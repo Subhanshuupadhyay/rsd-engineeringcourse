@@ -30,7 +30,7 @@ default: _site
 	dot $< -T png -o $@
 
 %.png: %.svg Makefile
-	inkscape -z -e $@ -w 600 $<
+	dbus-run-session inkscape -z -e $@ -w 600 $<
 
 %.png: %.uml plantuml.jar Makefile
 	java -Djava.awt.headless=true -jar plantuml.jar -p < $< > $@
@@ -63,7 +63,7 @@ master.zip: Makefile
 	rm -f master.zip
 	wget https://github.com/UCL-RITS/indigo-jekyll/archive/master.zip
 
-ready: indigo $(HTMLS) notes.pdf notebooks.zip
+ready: indigo $(HTMLS) # notes.pdf notebooks.zip
 
 indigo-jekyll-master: Makefile master.zip
 	rm -rf indigo-jekyll-master
