@@ -454,7 +454,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[c9467d36e1c4010486f31f6edb1336cdfa7ce497] Comment 500
+[1e4aa1d59e9e5f53d29a4ef7b9c45809f185d089] Comment 499
 </pre>
 </div>
 </div>
@@ -590,42 +590,44 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[c9467d36e1c4010486f31f6edb1336cdfa7ce497] Comment 500
+[1e4aa1d59e9e5f53d29a4ef7b9c45809f185d089] Comment 499
+running python squares.py 2
+Bisecting: 249 revisions left to test after this (roughly 8 steps)
+[b9d16694f2794743de7277230927a11494c2be76] Comment 250
 running python squares.py 2
 4
-Bisecting: 250 revisions left to test after this (roughly 8 steps)
-[16e2ea13259869ce30c74b1166201fefbeeb0191] Comment 749
-running python squares.py 2
 Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[fb7da66c0dcbb665d989c8041af13c5f6dfa4017] Comment 624
+[f8ef4a277ac8a70bb2ab1a7414abb6d2155948f8] Comment 374
 running python squares.py 2
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[7e2fdee97b696e012c2b0228461a55f2b4a7e829] Comment 561
+[63a49f1bade9dcc70f846a8812318ce3bbc5750d] Comment 312
 running python squares.py 2
-Bisecting: 30 revisions left to test after this (roughly 5 steps)
-[1faeebc0c404aa114e967bc0c53537c87714ab24] Comment 530
+4
+Bisecting: 31 revisions left to test after this (roughly 5 steps)
+[d03d18d6d1bb4db02d71095d187533eb7fac7c5f] Breaking argument type
 running python squares.py 2
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[90ca9d5627f5e779cccaae9ca1fb9a7b09be5997] Comment 515
+[d2651b737ce2d85b2680b8d2e958aa791e84bf24] Comment 327
 running python squares.py 2
 4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[d43095475a509c894b3cdc41da9b28dccb8a05e3] Comment 523
+[49feb3922c0a8579d7860532a7c7949b310c1cb6] Comment 335
 running python squares.py 2
 4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[f075f106ce7040cbdd68c1ebb3f3e360efb3cd0d] Breaking argument type
+[5f7fc0109d1503ca4682225e9e0868f2e19c0b85] Comment 339
 running python squares.py 2
+4
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[a5e324fed9b986a40b04970e4c2c90b5a440a033] Comment 525
+[a9f7faa630cd7080bff946235ce71f3eb737e381] Comment 341
 running python squares.py 2
 4
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[c8453af769c7b71c5b6c6e2b74e8ae0b06b8daf4] Comment 526
+[9a30dbfaeff9bf4567e6b9b30cdc71af57b1c2d0] Comment 342
 running python squares.py 2
 4
-f075f106ce7040cbdd68c1ebb3f3e360efb3cd0d is the first bad commit
-commit f075f106ce7040cbdd68c1ebb3f3e360efb3cd0d
+d03d18d6d1bb4db02d71095d187533eb7fac7c5f is the first bad commit
+commit d03d18d6d1bb4db02d71095d187533eb7fac7c5f
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -644,16 +646,8 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was c9467d3 Comment 500
+<pre>Previous HEAD position was 1e4aa1d Comment 499
 Switched to branch &#39;buggy&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
@@ -733,7 +727,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-10-26 17:48:33 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-10-28 19:37:35 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
