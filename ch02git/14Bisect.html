@@ -454,7 +454,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[bce5675763509e5e79a31cb814670fb7ed0f77c5] Comment 500
+[3cc38a9cc20ccf01a0201a83087d297c744a5ede] Comment 499
 </pre>
 </div>
 </div>
@@ -590,44 +590,41 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[bce5675763509e5e79a31cb814670fb7ed0f77c5] Comment 500
+[3cc38a9cc20ccf01a0201a83087d297c744a5ede] Comment 499
 running python squares.py 2
-4
-Bisecting: 250 revisions left to test after this (roughly 8 steps)
-[c06b05fb91499103365a8a24df4ccf6a351207c0] Comment 750
+Bisecting: 249 revisions left to test after this (roughly 8 steps)
+[1bdbeec23d1fd1007fc39c37b2dbfd362497f75d] Comment 249
 running python squares.py 2
-4
-Bisecting: 125 revisions left to test after this (roughly 7 steps)
-[2d7b9878e9b10c641f34eaca624895b793a37cc4] Comment 875
+Bisecting: 124 revisions left to test after this (roughly 7 steps)
+[ba7ef8f50dcb9e10e94730a9195f1037f1032685] Comment 125
 running python squares.py 2
 4
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[1ced6c2931f5ab354d978ef65630d8abf5575c28] Comment 937
+[b09aae6df1ce79e96a98a0a379ecab545f52e50e] Comment 187
 running python squares.py 2
+4
 Bisecting: 31 revisions left to test after this (roughly 5 steps)
-[5a478d7f3697f1bc832278d991bb5fcdffc72b67] Comment 905
+[b23e0e938260a88bc0d87501790eb2933c37dc45] Comment 218
 running python squares.py 2
+4
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[f2888eb48cf6e473176c61a71a8084dfd6353a4a] Comment 890
+[cce94573ff318c0d29f6bcae2998bdefe8e051d2] Comment 234
 running python squares.py 2
 4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[14f55a5893a1be38646ceadac0cd33ff1dc9afd2] Comment 898
+[bd50578d5e2db116aede6c877f9d6df0b319d52e] Comment 241
 running python squares.py 2
-4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[084f29a3ad47ea67c4c6b33a3ff124ee7bfb8a42] Comment 902
+[c449c99464cfb7354c1bd9fb56930023ab45550b] Comment 237
 running python squares.py 2
-4
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[cbc145df9a929633586df4e868e9bdc380cdb48b] Comment 904
+[d0fe33bc86a276f70e53282bd1a8955d996c6fd3] Comment 235
 running python squares.py 2
-4
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[f5233587c79d44c5b218ab8b1d350abfb4cff7d6] Breaking argument type
+[cf2bada984fd9e3398ace0a420ac3ee2717bc62e] Breaking argument type
 running python squares.py 2
-f5233587c79d44c5b218ab8b1d350abfb4cff7d6 is the first bad commit
-commit f5233587c79d44c5b218ab8b1d350abfb4cff7d6
+cf2bada984fd9e3398ace0a420ac3ee2717bc62e is the first bad commit
+commit cf2bada984fd9e3398ace0a420ac3ee2717bc62e
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -646,8 +643,20 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was bce5675 Comment 500
+<pre>Previous HEAD position was 3cc38a9 Comment 499
 Switched to branch &#39;buggy&#39;
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
@@ -727,7 +736,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-11-06 09:13:54 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-11-09 19:14:08 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

@@ -308,12 +308,12 @@ and the <a href="https://bitbucket.org/bemppsolutions/bempp/src/8f10af0b0b4a94bc
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We're going to document our "greeter" example using docstrings with Sphinx.</p>
-<p>There are various conventions for how to write docstrings, but the native sphinx one doesn't look nice when used with
+<p>We're going to document our "greeter" example from the previous section using docstrings with Sphinx.</p>
+<p>There are various conventions for how to write docstrings, but the native Sphinx one doesn't look nice when used with
 the built in <code>help</code> system.</p>
 <p>In writing Greeter, we used the docstring conventions from NumPy.
 So we use the <a href="https://numpydoc.readthedocs.io/en/latest/">numpydoc</a> sphinx extension to 
-support these.</p>
+support these (Note: you will need to install this extension for the later examples to work).</p>
 
 </div>
 </div>
@@ -351,14 +351,23 @@ support these.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Set-up-sphinx">Set up sphinx<a class="anchor-link" href="#Set-up-sphinx">&#182;</a></h3>
+<h3 id="Set-up-Sphinx">Set up Sphinx<a class="anchor-link" href="#Set-up-Sphinx">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Invoke the <a href="https://www.sphinx-doc.org/en/latest/usage/quickstart.html">sphinx-quickstart</a> command to build Sphinx's
+<p>Install Sphinx using the <a href="https://www.sphinx-doc.org/en/master/usage/installation.html">appropiate instructions</a> for your system following the documentation online.
+(Note that your output and the linked documentation may differ slightly depending on when you installed Sphinx and what version you're using.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Invoke the <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html">sphinx-quickstart</a> command to build Sphinx's
 configuration file automatically based on questions
 at the command line:</p>
 
@@ -386,13 +395,17 @@ at the command line:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>Welcome to the Sphinx 1.8.0 quickstart utility.
+<pre><code>Welcome to the Sphinx 3.3.0 quickstart utility.
 
-Please enter avalues for the following settings (just press Enter to
+Please enter values for the following settings (just press Enter to
 accept a default value, if one is given in brackets).
 
-Enter the root path for documentation.
-&gt; Root path for the documentation [.]:</code></pre>
+Selected root path: .
+
+You have two options for placing the build directory for Sphinx output.
+Either, you use a directory "_build" within the root path, or you separate
+"source" and "build" directories within the root path.
+&gt; Separate source and build directories (y/n) [n]:</code></pre>
 
 </div>
 </div>
@@ -839,7 +852,7 @@ Got:
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-11-06 09:13:54 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-11-09 19:14:08 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
