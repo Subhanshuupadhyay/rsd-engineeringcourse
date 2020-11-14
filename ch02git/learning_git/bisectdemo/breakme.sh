@@ -12,7 +12,9 @@ function comment {
 
 BREAKINDEX=$((RANDOM%1000))
 
-git branch -D buggy
+if git show-ref -q --heads buggy; then
+    git branch -D buggy
+fi
 git checkout -b buggy
 
 for i in $(seq 1 $BREAKINDEX); do

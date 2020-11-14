@@ -262,7 +262,7 @@
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span>%%bash
 rm -rf bisectdemo
-git clone git@github.com:shawnsi/bisectdemo.git
+git clone git@github.com:UCL-RITS/bisectdemo.git
 </pre></div>
 
     </div>
@@ -348,7 +348,7 @@ bisect to work out where it has broken:</p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash 
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
 ./breakme.sh &gt; break_output
 </pre></div>
 
@@ -366,8 +366,7 @@ bisect to work out where it has broken:</p>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>error: branch &#39;buggy&#39; not found.
-Switched to a new branch &#39;buggy&#39;
+<pre>Switched to a new branch &#39;buggy&#39;
 </pre>
 </div>
 </div>
@@ -389,7 +388,8 @@ Switched to a new branch &#39;buggy&#39;
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">python</span> <span class="n">squares</span><span class="o">.</span><span class="n">py</span> <span class="mi">2</span> <span class="c1"># Error message</span>
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+python squares.py <span class="m">2</span> <span class="c1"># Error message</span>
 </pre></div>
 
     </div>
@@ -405,13 +405,58 @@ Switched to a new branch &#39;buggy&#39;
     <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-6-8e2377cd54bf&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    python squares.py 2 # Error message</span>
-                 ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-a176db4e6bc6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;python squares.py 2 #\xa0Error message\n&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.6/lib/python3.7/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2380</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2381</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2382</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2383</span>             <span class="ansi-green-fg">return</span> result
+<span class="ansi-green-intense-fg ansi-bold">   2384</span> 
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.6/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
+<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    143</span> 
+<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
+
+<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.6/lib/python3.7/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span> 
+<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.7.6/lib/python3.7/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
+<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    246</span> 
+<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;python squares.py 2 #\xc2\xa0Error message\n&#39;&#39; returned non-zero exit status 1.</pre>
 </div>
 </div>
 
@@ -454,7 +499,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[3cc38a9cc20ccf01a0201a83087d297c744a5ede] Comment 499
+[8c52877b7b2196a701fa18fce4bd5f6cc01b02af] Comment 499
 </pre>
 </div>
 </div>
@@ -549,7 +594,8 @@ Date:   Thu Nov <span class="m">14</span> <span class="m">09</span>:23:55 <span 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span>git bisect end
+<p>Stop the bisect process with:</p>
+<div class="highlight"><pre><span></span>git bisect reset
 </pre></div>
 
 </div>
@@ -559,6 +605,7 @@ Date:   Thu Nov <span class="m">14</span> <span class="m">09</span>:23:55 <span 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Solving-automatically">Solving automatically<a class="anchor-link" href="#Solving-automatically">&#182;</a></h3><p>If we have an appropriate unit test, we can do all this automatically:</p>
+<p>(<em>NOTE</em>: You don't need <a href="https://linuxize.com/post/bash-redirect-stderr-stdout/">to redirect the <code>stderr</code> and <code>stdout</code></a> (with <code>&amp;&gt;</code>) of <code>git bisect run</code> to a file when running these commands outside a jupyter notebook (i.e., on a shell). This is done here so the errors appears with the right commits)</p>
 
 </div>
 </div>
@@ -572,7 +619,8 @@ Date:   Thu Nov <span class="m">14</span> <span class="m">09</span>:23:55 <span 
 git bisect start
 git bisect bad HEAD <span class="c1"># We know the current state is broken</span>
 git bisect good master <span class="c1"># We know master is good</span>
-git bisect run python squares.py <span class="m">2</span>
+git bisect run python squares.py <span class="m">2</span> <span class="p">&amp;</span>&gt; gitbisect.out
+cat gitbisect.out
 </pre></div>
 
     </div>
@@ -590,41 +638,59 @@ git bisect run python squares.py <span class="m">2</span>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[3cc38a9cc20ccf01a0201a83087d297c744a5ede] Comment 499
+[8c52877b7b2196a701fa18fce4bd5f6cc01b02af] Comment 499
 running python squares.py 2
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[1bdbeec23d1fd1007fc39c37b2dbfd362497f75d] Comment 249
+[06a745e2a5363385e2070ad432de55706c4f4002] Comment 249
 running python squares.py 2
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[ba7ef8f50dcb9e10e94730a9195f1037f1032685] Comment 125
+[c4f2d438a7b94942b7ad47cef795f4fc1eae2acb] Comment 125
 running python squares.py 2
 4
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[b09aae6df1ce79e96a98a0a379ecab545f52e50e] Comment 187
+[51413682ff3a22aa6057314ed7ff058b39b158cf] Comment 187
 running python squares.py 2
 4
 Bisecting: 31 revisions left to test after this (roughly 5 steps)
-[b23e0e938260a88bc0d87501790eb2933c37dc45] Comment 218
+[708f44fab9b13723b8c308ff6fe96412c292f81d] Comment 218
 running python squares.py 2
 4
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[cce94573ff318c0d29f6bcae2998bdefe8e051d2] Comment 234
+[81ab1ce03677fe3446f9537c4deb189a0f78c670] Comment 234
 running python squares.py 2
 4
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[bd50578d5e2db116aede6c877f9d6df0b319d52e] Comment 241
+[e2d97550881a69539992b49d9462c92893b7af4c] Comment 242
 running python squares.py 2
+4
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[c449c99464cfb7354c1bd9fb56930023ab45550b] Comment 237
+[aa14ed24f16d41e476cd3e6d2b342879ab61f8f4] Comment 246
 running python squares.py 2
+4
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[d0fe33bc86a276f70e53282bd1a8955d996c6fd3] Comment 235
+[c6a7d361df70fcbf49757227dac314eb48c5b2d4] Comment 247
 running python squares.py 2
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[cf2bada984fd9e3398ace0a420ac3ee2717bc62e] Breaking argument type
+[bbb70688b3583cf25f3849b9e59b1726a3bc0c0d] Breaking argument type
 running python squares.py 2
-cf2bada984fd9e3398ace0a420ac3ee2717bc62e is the first bad commit
-commit cf2bada984fd9e3398ace0a420ac3ee2717bc62e
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
+bbb70688b3583cf25f3849b9e59b1726a3bc0c0d is the first bad commit
+commit bbb70688b3583cf25f3849b9e59b1726a3bc0c0d
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -643,32 +709,8 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was 3cc38a9 Comment 499
+<pre>Previous HEAD position was 8c52877 Comment 499
 Switched to branch &#39;buggy&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 </pre>
 </div>
 </div>
@@ -736,7 +778,7 @@ TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;i
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-11-09 19:14:08 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-11-14 02:04:43 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>
