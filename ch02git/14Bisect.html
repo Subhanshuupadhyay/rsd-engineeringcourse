@@ -499,7 +499,7 @@ git bisect good <span class="c1"># We know the master branch state is OK</span>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Your branch is up to date with &#39;origin/master&#39;.
 Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[8c52877b7b2196a701fa18fce4bd5f6cc01b02af] Comment 499
+[a428d8076c3474c05c1f1f856a8512a172ceed04] Comment 499
 </pre>
 </div>
 </div>
@@ -638,59 +638,65 @@ cat gitbisect.out
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bisecting: 500 revisions left to test after this (roughly 9 steps)
-[8c52877b7b2196a701fa18fce4bd5f6cc01b02af] Comment 499
+[a428d8076c3474c05c1f1f856a8512a172ceed04] Comment 499
 running python squares.py 2
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[06a745e2a5363385e2070ad432de55706c4f4002] Comment 249
+[0617a9672ccedc7448c97f4b72b3c6d3eeb9c978] Comment 250
+running python squares.py 2
+4
+Bisecting: 124 revisions left to test after this (roughly 7 steps)
+[194561da093cf50ab6e7c4938e1e258afe48814e] Comment 374
 running python squares.py 2
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[c4f2d438a7b94942b7ad47cef795f4fc1eae2acb] Comment 125
-running python squares.py 2
-4
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[51413682ff3a22aa6057314ed7ff058b39b158cf] Comment 187
+[867546930612c9f4a8e7fdd235ef0d754313974f] Comment 312
 running python squares.py 2
 4
 Bisecting: 31 revisions left to test after this (roughly 5 steps)
-[708f44fab9b13723b8c308ff6fe96412c292f81d] Comment 218
+[44afa023e9d9e06613547ccf548b8a6ae12e8238] Comment 342
 running python squares.py 2
-4
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[81ab1ce03677fe3446f9537c4deb189a0f78c670] Comment 234
+[773d30469d6504e65096c1cebdf767325e5097fd] Comment 326
 running python squares.py 2
-4
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[e2d97550881a69539992b49d9462c92893b7af4c] Comment 242
+[e1aaa46e564174ff93afd90c974a07eaf302934e] Comment 318
 running python squares.py 2
-4
+Traceback (most recent call last):
+  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[aa14ed24f16d41e476cd3e6d2b342879ab61f8f4] Comment 246
+[9305a86a3891312bd7e120aaebece918da356be4] Comment 315
 running python squares.py 2
 4
 Bisecting: 1 revision left to test after this (roughly 1 step)
-[c6a7d361df70fcbf49757227dac314eb48c5b2d4] Comment 247
+[85b772c8177e6b0f99a29bf63162bc711c7d7271] Breaking argument type
 running python squares.py 2
 Traceback (most recent call last):
   File &#34;squares.py&#34;, line 9, in &lt;module&gt;
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[bbb70688b3583cf25f3849b9e59b1726a3bc0c0d] Breaking argument type
+[38058c0ff13129bcb12835489d3f0db65cc750e7] Comment 316
 running python squares.py 2
-Traceback (most recent call last):
-  File &#34;squares.py&#34;, line 9, in &lt;module&gt;
-    print(integer**2)
-TypeError: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
-bbb70688b3583cf25f3849b9e59b1726a3bc0c0d is the first bad commit
-commit bbb70688b3583cf25f3849b9e59b1726a3bc0c0d
+4
+85b772c8177e6b0f99a29bf63162bc711c7d7271 is the first bad commit
+commit 85b772c8177e6b0f99a29bf63162bc711c7d7271
 Author: Shawn Siefkas &lt;shawn.siefkas@meredith.com&gt;
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
@@ -709,7 +715,7 @@ bisect run success
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Previous HEAD position was 8c52877 Comment 499
+<pre>Previous HEAD position was a428d80 Comment 499
 Switched to branch &#39;buggy&#39;
 </pre>
 </div>
@@ -778,7 +784,7 @@ Switched to branch &#39;buggy&#39;
       <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
     </ul>
     <ul class="list-inline footer__list list-unstyled list-inline--divided">
-      <li class="text-muted small">Copyright © 2020-11-14 02:04:43 +0000 UCL</li>
+      <li class="text-muted small">Copyright © 2020-11-21 04:30:48 +0000 UCL</li>
       <li class="text-muted small"><a href="#">Disclaimer</a>
       </li>
       <li class="text-muted small"><a href="#">Freedom of Information</a>

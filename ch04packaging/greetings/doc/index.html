@@ -37,28 +37,25 @@
 <dl class="py function">
 <dt id="greetings.greeter.greet">
 <code class="sig-prename descclassname">greetings.greeter.</code><code class="sig-name descname">greet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">personal</span></em>, <em class="sig-param"><span class="n">family</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">polite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/greetings/greeter.html#greet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#greetings.greeter.greet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a greeting string for a person.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>personal: str</strong></dt><dd><p>A given name, such as Will or Jean-Luc</p>
+<dd><p>Generate a greeting string for a person.
+Parameters
+———-
+personal: str</p>
+<blockquote>
+<div><p>A given name, such as Will or Jean-Luc</p>
+</div></blockquote>
+<dl class="simple">
+<dt>family: str</dt><dd><p>A family name, such as Riker or Picard</p>
 </dd>
-<dt><strong>family: str</strong></dt><dd><p>A family name, such as Riker or Picard</p>
+<dt>title: str</dt><dd><p>An optional title, such as Captain or Reverend</p>
 </dd>
-<dt><strong>title: str</strong></dt><dd><p>An optional title, such as Captain or Reverend</p>
-</dd>
-<dt><strong>polite: bool</strong></dt><dd><p>True for a formal greeting, False for informal.</p>
+<dt>polite: bool</dt><dd><p>True for a formal greeting, False for informal.</p>
 </dd>
 </dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
+<dl class="simple">
 <dt>string</dt><dd><p>An appropriate greeting</p>
 </dd>
 </dl>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">greetings.greeter</span> <span class="kn">import</span> <span class="n">greet</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Terry&quot;</span><span class="p">,</span> <span class="s2">&quot;Jones&quot;</span><span class="p">)</span>
 <span class="go">&#39;Hey, Terry Jones.</span>
