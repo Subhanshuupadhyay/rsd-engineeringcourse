@@ -1,61 +1,57 @@
 running python squares.py 2
+4
+Bisecting: 250 revisions left to test after this (roughly 8 steps)
+[2b508ce4c84e12fb20c080b43fde17d067376222] Comment 749
+running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
-Bisecting: 249 revisions left to test after this (roughly 8 steps)
-[0617a9672ccedc7448c97f4b72b3c6d3eeb9c978] Comment 250
-running python squares.py 2
-4
 Bisecting: 124 revisions left to test after this (roughly 7 steps)
-[194561da093cf50ab6e7c4938e1e258afe48814e] Comment 374
+[5e6608cc9f936f2fb712b68934629ed1dd8abb14] Comment 624
 running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 Bisecting: 62 revisions left to test after this (roughly 6 steps)
-[867546930612c9f4a8e7fdd235ef0d754313974f] Comment 312
+[79108ae4136d95a5a7160bf1dc3233e706397fa2] Comment 562
 running python squares.py 2
 4
 Bisecting: 31 revisions left to test after this (roughly 5 steps)
-[44afa023e9d9e06613547ccf548b8a6ae12e8238] Comment 342
+[bcfff4bc20bcae443db177cb5b8baefadf1535d1] Comment 592
 running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 Bisecting: 15 revisions left to test after this (roughly 4 steps)
-[773d30469d6504e65096c1cebdf767325e5097fd] Comment 326
+[f710ba9061d3528b9abeb89455cd0c594c455fa0] Comment 576
 running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[e1aaa46e564174ff93afd90c974a07eaf302934e] Comment 318
+[2a8a51aea2f979e5f2f26a95c120e68cb72d804a] Comment 568
 running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 Bisecting: 3 revisions left to test after this (roughly 2 steps)
-[9305a86a3891312bd7e120aaebece918da356be4] Comment 315
-running python squares.py 2
-4
-Bisecting: 1 revision left to test after this (roughly 1 step)
-[85b772c8177e6b0f99a29bf63162bc711c7d7271] Breaking argument type
+[0e70a339cf203f567ca4d624f493efa966147213] Breaking argument type
 running python squares.py 2
 Traceback (most recent call last):
   File "squares.py", line 9, in <module>
     print(integer**2)
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
-Bisecting: 0 revisions left to test after this (roughly 0 steps)
-[38058c0ff13129bcb12835489d3f0db65cc750e7] Comment 316
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[20bfa14f58af0f061fc368b33c58917f730ea00f] Comment 564
 running python squares.py 2
 4
-85b772c8177e6b0f99a29bf63162bc711c7d7271 is the first bad commit
-commit 85b772c8177e6b0f99a29bf63162bc711c7d7271
+0e70a339cf203f567ca4d624f493efa966147213 is the first bad commit
+commit 0e70a339cf203f567ca4d624f493efa966147213
 Author: Shawn Siefkas <shawn.siefkas@meredith.com>
 Date:   Thu Nov 14 09:23:55 2013 -0600
 
